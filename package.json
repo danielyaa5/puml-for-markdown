@@ -1,0 +1,38 @@
+{
+  "name": "puml-for-md",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "danielyaa5",
+  "license": "ISC",
+  "dependencies": {
+    "bent": "7.3.12",
+    "bluebird": "3.7.2",
+    "commander": "8.2.0",
+    "glob": "7.2.0",
+    "lodash": "4.17.21",
+    "plantuml-encoder": "1.4.0",
+    "tinyurl": "1.1.7"
+  },
+  "bin": {
+    "puml4md": "./bin/index.js"
+  },
+  "keywords": [
+    "puml",
+    "git",
+    "markdown",
+    "github",
+    "generator",
+    "plantuml",
+    "c4-plantuml",
+    "c4",
+    "diagrams",
+    "documentation",
+    "md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielyaa5/puml-for-markdown"
+  }
+}
