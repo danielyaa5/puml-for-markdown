@@ -1,0 +1,40 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+!include ./c4_styles.puml
+!include ./constants.puml
+
+LAYOUT_LANDSCAPE()
+
+left header
+
+\t<font size=22 color=black>Some Job - Component View</font>
+
+
+
+
+end header
+
+
+Component(scheduler, "Scheduler", "some-etl-framework", "Kicks off the job at some interval")
+Component(extractTransform, "DatasourceExtractTransform", "Operator", "Pull data from labeler datasource and perform any transforms before storing the data")
+Component(loader, "DatasourceLoader", "Operator", "Update //$SAMPLE_LABELS_TABLE// with new labels")
+Component(someMicroService, "SomeMicroService", "SubDag", "Foo bar baz")
+Component(performCalculations, "PerformCalculation", "Operator", "Trigger the calculation of xyz")
+Component(calculatePrevalence, "CalculatePrevalence", "Operator", "Trigger the calculation prevalence and store it")
+ComponentDb($SAMPLE_LABELS_ID, $SAMPLE_LABELS_TABLE, $SAMPLE_LABELS_TYPE, $SAMPLE_LABELS_COMPONENT_DESC)
+
+Rel_R(scheduler, extractTransform, " ")
+Rel_R(extractTransform, loader, " ")
+Rel_R(loader, performCalculations, "When all labels retrieved")
+Rel_U(loader, $SAMPLE_LABELS_ID, " ")
+Rel_D(loader, "someMicroService", " ")
+Rel_R(performCalculations, calculatePrevalence, " ")
+
+center footer
+
+
+
+end footer
+
+HIDE_STEREOTYPE()
+@enduml

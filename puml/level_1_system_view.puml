@@ -1,0 +1,36 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+!include ./c4_styles.puml
+!include ./constants.puml
+
+left header
+
+\t<font size=22 color=black>$SYSTEM_NAME - System View</font>
+
+\t<font size=14 color=#484848>The goals of my project are described here</font>
+
+
+
+
+end header
+
+
+System(sysName, "Labeling System\n", "", $sprite="cloud", $tags="primary", $link="./level_2_container_view.puml")
+
+Boundary(labelers, ' \n<font color=black size=16>Labelers</font>', 'Human Resources') {
+    Person(labelerB, "Labelers B", "Labeler Type 2\n", $tags="a")
+    Person(labelerA, "Labelers A", "Labeler Type 2\n", $tags="a")
+}
+Rel_U(sysName, labelerB,"  Trigger samples for labeling")
+Rel_D(labelerB, sysName," Store labeling results        ")
+
+System(videoSamples, "Videos", "Users and internal customers", $sprite="youtube")
+Rel_D(videoSamples, labelerA, " Send samples to labelers")
+
+System(modelTrainingInference, "Model Training + Inference\n\n<font color=#e0575e><$RoboMaker></font>\n", "", $tags="secondary")
+Rel_D(labelerA, modelTrainingInference," Send labels")
+Rel_R(modelTrainingInference, sysName, "Send model scores")
+Rel_L(sysName, modelTrainingInference, "Send labels")
+
+HIDE_STEREOTYPE()
+@enduml

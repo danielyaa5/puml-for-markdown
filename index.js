@@ -7,65 +7,112 @@
 const fs = require('fs')
 const path = require('path')
 const assert = require('assert')
-const bent = require('bent')
 
+const bent = require('bent')
 const Promise = require('bluebird')
 const _ = require('lodash')
 const glob = require('glob')
 const plantUmlEncoder = require('plantuml-encoder')
 const tiny = require('tinyurl');
+const parseGitIgnore = require('gitignore-globs');
 
 
 // CONSTANTS
-const DIAGRAMS_FOLDER_NAME = 'diagrams'
-const SOURCE_FOLDER_NAME = 'source'
-const PUML_SVG_SERVER = 'https://www.plantuml.com/plantuml/svg'
-const PUML_PNG_SERVER = 'https://www.plantuml.com/plantuml/png'
+
+const PUML_SERVER = 'https://www.plantuml.com/plantuml'
 
 // HELPERS
 
 const getBuffer = bent('buffer')
-const sourceDir = (docsDir) => path.resolve(docsDir, SOURCE_FOLDER_NAME)
-const diagramsDir = (docsDir) => path.resolve(sourceDir(docsDir), DIAGRAMS_FOLDER_NAME)
-const diagramsOutputDir = (docsDir) => path.resolve(docsDir, DIAGRAMS_FOLDER_NAME)
 const mkdirIfDoesntExist = (p) => !fs.existsSync(p) && fs.mkdirSync(p, {recursive: true})
-const formatPumlPath = (p) => p.replace(/^\.\//, '')
-const getPngUrl = (encodedData) => `${PUML_PNG_SERVER}/${encodedData}}`
-const getPumlTinyUrl = (encodedData) => tiny.shorten(`${PUML_SVG_SERVER}/${encodedData}`)
+const getPumlUrl = (imgFormat, encodedData, shorten) => shorten ?
+    tiny.shorten(getFullPumlUrl(imgFormat, encodedData)) : getFullPumlUrl(imgFormat, encodedData)
+const getFullPumlUrl = (imgFormat, encodedData) => `${PUML_SERVER}/${imgFormat}/${encodedData}}`
 const mapUniqMatches = (s, re, mapper, match = re.exec(s), results = []) => {
     if (match) return mapUniqMatches(s, re, mapper, re.exec(s), results.concat([match]))
     return _.uniqBy(results, String).map(mapper)
 }
-const saveDiagramAsPng = async (docsDir, relPumlPath, encodedData) => {
-    const outputP = path.resolve(diagramsOutputDir(docsDir), relPumlPath).replace(/puml$/, 'png')
-    mkdirIfDoesntExist(path.dirname(outputP))
-    const buffer = await getBuffer(getPngUrl(encodedData));
-    fs.writeFileSync(outputP, buffer)
+
+const replaceIgnore = (ignoreRegex, str, replaceFn) => {
+    const splitRegex = new RegExp(`(?:(${ignoreRegex}))`, 'g')
+    const splitStrArr = str.split(splitRegex)
+    const replacedSplitStrArr = splitStrArr.map((splitStr) => {
+        if (splitStr.match(new RegExp(ignoreRegex))) return splitStr
+        return replaceFn(splitStr)
+    })
+    return replacedSplitStrArr.join('')
 }
 
-const saveDiagramsAsPng = (docsDir, relPumlPaths, pumlLinks) => Promise.all(
-    relPumlPaths.map(p => saveDiagramAsPng(diagramsOutputDir(docsDir), p, pumlLinks.get(p).encodedData))
-)
+const replaceMdIgnoringInlineCode = (mdString, replaceFn) => {
+    return replaceIgnore('`[^\n]*?(?=`)`', mdString, replaceFn)
+}
 
+const replaceMdIgnoringCodeBlocks = (mdString, replaceFn) => {
+    return replaceIgnore('```[\\s\\S]*?(?=```)```', mdString, replaceFn)
+}
+
+const replaceMdIgnoringCode = (mdString, replaceFn) => {
+    return replaceMdIgnoringCodeBlocks(mdString, str => replaceMdIgnoringInlineCode(str, replaceFn))
+}
 
 // DATA STRUCTURES
 
 class PumlLinks extends Map {
-    get(p) {
-        return super.get(formatPumlPath(p));
+    constructor(pumlPaths, shouldShortenLinks) {
+        super();
+        this.shouldShortenLinks = shouldShortenLinks
+        // Mark paths so we know which should be visited
+        // Any path that's not marked 0 we know isn't a puml path because it doesn't correspond to a puml fil
+        pumlPaths.forEach(p => this.set(p, 0))
     }
 
-    async set(p, v) {
-        const formattedPath = formatPumlPath(p)
-        if (typeof v === 'number') return super.set(formattedPath, v)
+    get(p) {
+        return super.get(p);
+    }
+
+    async set(pumlPath, v) {
+        if (typeof v === 'number') return super.set(pumlPath, v)
 
         const encodedData = plantUmlEncoder.encode(v)
-        const tinyUrl = await getPumlTinyUrl(encodedData)
-        return super.set(formattedPath, {encodedData, tinyUrl, data: v});
+        const url = await getPumlUrl('svg', encodedData, this.shouldShortenLinks)
+        return super.set(pumlPath, {encodedData, url, data: v});
     }
 
-    has(p) {
-        return super.has(formatPumlPath(p));
+    has(pumlPath) {
+        return super.has(pumlPath);
+    }
+}
+
+// SAVING DIAGRAMS
+
+const downloadImg = async (outputPath, imgUrl) => {
+    const imgBuffer = await getBuffer(imgUrl)
+    fs.writeFileSync(outputPath, imgBuffer)
+}
+
+const saveDiagram = async ({rootDirectory, distDirectory, pumlPath, imgFormat, encodedData}) => {
+    const outputPath = path.join(
+        distDirectory, pumlPath.replace(rootDirectory, '').replace(/\.puml$/, `.${imgFormat}`)
+    )
+
+    mkdirIfDoesntExist(path.dirname(outputPath))
+    const imgUrl = getFullPumlUrl(imgFormat, encodedData)
+    try {
+        await downloadImg(outputPath, imgUrl)
+    } catch (e) {
+        console.warn(`\nWARN: Failed to save ${imgUrl} to ${outputPath}\n`)
+        if (e.statusCode !== 400) throw e
+    }
+}
+
+const saveDiagrams = async ({ rootDirectory, distDirectory, imageFormats, pumlLinks }) => {
+    fs.rmSync(distDirectory, {recursive: true, force: true});
+    for (let [pumlPath, {encodedData}] of pumlLinks) {
+        for (let imgFormat of imageFormats) {
+            await saveDiagram({
+                distDirectory, rootDirectory, pumlPath, imgFormat, encodedData
+            })
+        }
     }
 }
 
@@ -73,14 +120,11 @@ class PumlLinks extends Map {
 
 /**
  * Add the whole relative includes file into the puml instead of a reference
- * @param {string} docsDir
- * @param {string} data
- * @param {string} pumlPath
  * @returns {string} The puml data where relative includes are replaced with the data from referenced file
  */
-const processIncludes = (docsDir, data, pumlPath) => {
+const processIncludes = (pumlPath, data) => {
     return data.replace(/!include (.*)/g, (fullMatch, url) => {
-        const fullUrl = path.resolve(diagramsDir(docsDir), path.dirname(pumlPath), url)
+        const fullUrl = path.resolve(path.dirname(pumlPath), url)
         return fs.existsSync(fullUrl) ? fs.readFileSync(fullUrl, 'utf8') : fullMatch
     })
 }
@@ -89,84 +133,97 @@ const processIncludes = (docsDir, data, pumlPath) => {
 /**
  * Walk through each PUML file recursively so we can encode any linked files first since the files they link
  * from are dependent
- * @param {string} docsDir
- * @param {string} link
- * @param {PumlLinks} pumlLinks
  * @returns {Promise<string> | Promise<undefined>} Returns either processed puml file link, or original link
  */
-const processPumlFile = async (docsDir, link, pumlLinks) => {
+const processPumlFile = async (pumlPath, pumlLinks) => {
     // Base Cases
-    if (!pumlLinks.has(link)) return link
-    if (pumlLinks.get(link)) return pumlLinks.get(link)
+    if (!pumlLinks.has(pumlPath)) return pumlPath
+    if (pumlLinks.get(pumlPath)) return pumlLinks.get(pumlPath)
 
-    let data = fs.readFileSync(path.join(diagramsDir(docsDir), link), 'utf8')
-    await Promise.all(mapUniqMatches(data, /\$link=["']([^"']+)['"]/gm, async ([styledNestedLink, nestedLink]) => {
-        const newLink = await processPumlFile(docsDir, nestedLink, pumlLinks)
-        data = data.replaceAll(styledNestedLink, `$link="${newLink.tinyUrl}"`)
+    let data = fs.readFileSync(pumlPath, 'utf8')
+    await Promise.all(mapUniqMatches(data, /\$link=["']([^"']+)['"]/gm, async ([pumlLink, pumlLinkPath]) => {
+        // console.debug(pumlLink, pumlLinkPath)
+        const newLink = await processPumlFile(path.resolve(path.dirname(pumlPath), pumlLinkPath), pumlLinks)
+        data = data.replaceAll(pumlLink, `$link="${newLink.url}"`)
     }))
 
-    data = processIncludes(docsDir, data, link)
-    await pumlLinks.set(link, data)
-    return pumlLinks.get(link)
+    data = processIncludes(pumlPath, data)
+    await pumlLinks.set(pumlPath, data)
+    return pumlLinks.get(pumlPath)
 }
 
 /**
  * Update any markdown links which reference PUML diagram so they link directly to a puml server svg link
  * Output them as new markdown in the docs directory
- * @param {string} docsDir
- * @param {object} p An object with absolute and relative path of the markdown file being processed
- * @param {PumlLinks} pumlLinks A map which stores a relative link to a puml file => shortened url to the puml svg server link
  */
-const processMdFile = async (docsDir, p, pumlLinks) => {
-    let pumlsToOutputAsPng = []
-    let data = '[comment]: <> (THIS IS A GENERATED MARKDOWN FILE, PLEASE EDIT SOURCE)\n'
-    data += fs.readFileSync(p.abs, 'utf8')
-    // Create puml links for any new relative links to puml files
-    const findMdPumlLinksRE = new RegExp(`(!?\\[[^\\]]+\\])\\(([^)]+\\.puml)\\)`, 'g')
-    data = data.replace(findMdPumlLinksRE, (match, linkText, pumlPath) => {
-        const absPumlPath = path.resolve(sourceDir(docsDir), pumlPath)
-        const relPumlPath = path.relative(diagramsDir(docsDir), absPumlPath)
-        const pumlLink = pumlLinks.get(relPumlPath)
-        if (match[0] === '!') {
-            pumlsToOutputAsPng.push(relPumlPath)
-        }
-        return `${linkText}(${pumlLink.tinyUrl})`
+const processMdFile = async (mdPath, pumlLinks) => {
+    console.info(`Processing md file at ${mdPath}`)
+    let originalMdStr = fs.readFileSync(mdPath, 'utf8')
+    const findMdPumlLinksRE = new RegExp(
+        `(\\[.*\]\\([^)]+\\))?<!\-\-(!?\\[[^\\]]+\\])\\(([^)]+\\.puml)\\)\-\->`, 'g'
+    )
+    // Add puml server tinyurl link for puml links indicated in markdown comments
+    const mdWithUpdatedPumlLinks = replaceMdIgnoringCode(originalMdStr, (str) => {
+        return str.replace(findMdPumlLinksRE, (match, _, linkText, mdPumlLinkPath) => {
+            const pumlPath = path.resolve(path.dirname(mdPath), mdPumlLinkPath)
+            const pumlLink = pumlLinks.get(pumlPath)
+            if (!pumlLink) {
+                throw Error(`Could not find puml for md link path = ${mdPumlLinkPath}, absolute path = ${pumlPath}`)
+            }
+            let replacement
+            // If the puml link is a markdown image
+            if (linkText[0] === '!') {
+                replacement = `[${linkText}(${pumlLink.url})](${pumlLink.url})<!--${linkText}(${mdPumlLinkPath})-->`
+            } else {
+                // If the puml link is a markdown hyperlink
+                replacement = `${linkText}(${pumlLink.url})<!--${linkText}(${mdPumlLinkPath})-->`
+            }
+
+            // console.debug({match, linkText, mdPumlLinkPath, replacement})
+            return replacement
+        })
     })
 
-    const outputP = path.resolve(docsDir, p.rel)
-    mkdirIfDoesntExist(path.dirname(outputP))
-    fs.writeFileSync(outputP, data)
 
-    await saveDiagramsAsPng(docsDir, pumlsToOutputAsPng, pumlLinks)
+    fs.writeFileSync(mdPath, mdWithUpdatedPumlLinks)
 }
 
-/**
- *
- * @param {string} docsDir Where to output generated markdown and templates also where the source markdown and diagrams
- * are located
- * @returns {Promise<void>}
- */
-const runOnce = async (docsDir) => {
-    assert(fs.existsSync(docsDir), "That's an invalid docs folder path")
+const runOnce = async (
+    {
+        rootDirectory,
+        markdownDirectory,
+        pumlDirectory,
+        distDirectory,
+        outputImages,
+        imageFormats,
+        respectGitignore,
+        gitignorePath,
+        shouldShortenLinks,
+    }
+) => {
+    assert(fs.existsSync(markdownDirectory), "That's an invalid md folder path")
+    assert(fs.existsSync(pumlDirectory), "That's an invalid puml folder path")
 
-    const pumlLinks = new PumlLinks()
-    const mdPaths = glob.sync(`${sourceDir(docsDir)}/**/*.md`)
-        .map(abs => ({ abs, rel: path.relative(sourceDir(docsDir), abs) }))
-    const pumlPaths = glob.sync(`${diagramsDir(docsDir)}/**/*.puml`)
-        .map(abs => ({ abs, rel: path.relative(diagramsDir(docsDir), abs) }))
+    const ignore = respectGitignore ? parseGitIgnore(gitignorePath) : []
+    const mdPaths = glob.sync(`${markdownDirectory}/**/*.md`, {ignore, nodir: true})
+    const pumlPaths = glob.sync(`${pumlDirectory}/**/*.puml`, {ignore, nodir: true})
+    const pumlLinks = new PumlLinks(pumlPaths, shouldShortenLinks)
 
-    mkdirIfDoesntExist(diagramsOutputDir(docsDir))
+    for (let p of pumlPaths) await processPumlFile(p, pumlLinks)
+    for (let p of mdPaths) await processMdFile(p, pumlLinks)
 
-    // Mark paths so we know which should be visited
-    // Any path that's not marked 0 we know isn't a puml path because it doesn't correspond to a puml fil
-    pumlPaths.forEach(p => pumlLinks.set(p.rel, 0))
-
-    for (let p of pumlPaths) await processPumlFile(docsDir, p.rel, pumlLinks)
-    for (let p of mdPaths) await processMdFile(docsDir, p, pumlLinks)
+    if (outputImages) {
+        await saveDiagrams({
+            rootDirectory, distDirectory, imageFormats, pumlLinks
+        })
+    }
 }
 
-const reloadRun = (docsDir, intervalSec) => Promise.delay(intervalSec * 1000, docsDir)
-    .then(run).catch(console.error).finally(() => reloadRun(docsDir))
+const reloadRun = ({intervalSeconds, ...rest}) =>
+    Promise.delay(intervalSeconds * 1000, rest)
+        .then(run).catch(console.error)
+        .finally(() => reloadRun({intervalSeconds, ...rest}))
 
-const run = (docsDir, intervalSec) => intervalSec ? reloadRun(docsDir, intervalSec) : runOnce(docsDir)
+const run = ({hotReload, ...rest}) => hotReload ? reloadRun(rest) : runOnce(rest)
+
 module.exports = run

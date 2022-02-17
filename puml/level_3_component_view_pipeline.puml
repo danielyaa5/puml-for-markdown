@@ -1,0 +1,58 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+!include ./c4_styles.puml
+!include ./constants.puml
+
+LAYOUT_LANDSCAPE()
+
+left header
+
+\t<font size=22 color=black>The Pipeline - Component View</font>
+
+\t<font size=14 color=black><U+25CF>  Goal 1</font>
+\t<font size=14 color=black><U+25CF>  Goal 2</font>
+\t<font size=14 color=black><U+25CF>  Goal 3</font>
+\t<font size=14 color=black><U+25CF>  Goal 4</font>
+
+
+
+
+
+end header
+
+
+Person(labelerB, "Labeler B", " Labeler B Description \n", $tags="a")
+ContainerDb($LABELED_DATASOURCE_ID, "$LABELED_DATASOURCE_NAME", "$LABELED_DATASOURCE_TYPE", $LABELED_DATASOURCE_DESC)
+Boundary(pipeline, " \nEntire Pipeline Infrastructure\n") {
+    ComponentDb($SAMPLE_LABELS_ID, $SAMPLE_LABELS_TABLE, $SAMPLE_LABELS_TYPE, $SAMPLE_LABELS_COMPONENT_DESC)
+    Boundary(pipelineDag, "Pipeline DAG", $tags="highlightBoundary") {
+        Component(scheduler, "Scheduler", "some-etl-framework", "Kicks off pipeline at some interval")
+        Component(waitForDependentTables, "Wait For Dependent Tables", "worker", "Waits for dependent tables to be populated")
+        Component(prevalenceSampler, "Label Type A Sampler", "worker", "Queries for type A labels", $tags="primary", $link="./level_4_activity_diagram_sampler_a.puml")
+        Component(trainingSampler, "Label Type B Sampler", "worker", "Receives all sampling labels type B", $tags="primary", $link="./level_4_activity_diagram_sampler_b.puml")
+        Component(sendSamplesForLabeling, "SendSamplesForLabeling", "worker", "Send samples for labeling")
+    }
+    Container(reviewQueueApi, "ReviewQueueAPI", "NodeJS", "An API used for pulling labels", $sprite="server")
+    ComponentDb($DAILY_COLLECTED_SAMPLES_ID, $DAILY_COLLECTED_SAMPLES_TABLE, $DAILY_COLLECTED_SAMPLES_TYPE, $DAILY_COLLECTED_SAMPLES_DESC)
+    ComponentQueue(samplesForLabelingQueue, "SamplesForLabelingQueue", "SQS", "Queue for double review")
+}
+ContainerDb(modelScoreDb, "ModelScoreDB", "BigQuery", "A database where the inference score is stored")
+
+
+
+Rel_R(scheduler, waitForDependentTables, " ")
+Rel_R(waitForDependentTables, prevalenceSampler, "Query used to create table to sample from")
+Rel_R(prevalenceSampler, trainingSampler, " ")
+Rel_U(modelScoreDb, prevalenceSampler, " ")
+Rel_D($SAMPLE_LABELS_ID, prevalenceSampler, "Check what samples have already been sent for labeling**\n** ")
+Rel_R(trainingSampler, sendSamplesForLabeling, " ")
+Rel_D(sendSamplesForLabeling, $SAMPLE_LABELS_ID, " ")
+Rel_R(sendSamplesForLabeling, samplesForLabelingQueue, " ")
+Rel_U(trainingSampler, $DAILY_COLLECTED_SAMPLES_ID, " ")
+Rel_U(prevalenceSampler, $DAILY_COLLECTED_SAMPLES_ID, " ")
+Rel_R(samplesForLabelingQueue, reviewQueueApi, " ")
+Rel_R(reviewQueueApi, labelerB, " ")
+Rel_U(labelerB, $LABELED_DATASOURCE_ID, " ")
+
+HIDE_STEREOTYPE()
+@enduml

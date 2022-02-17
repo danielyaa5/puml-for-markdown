@@ -1,0 +1,32 @@
+@startuml
+!include ./styles.puml
+!include ./constants.puml
+
+left header
+
+\t<font size=22 color=black>Sampler B - Activity Diagram</font>
+
+\t<font size=14 color=black>Description of goal                                            </font>
+
+
+end header
+
+start
+#E4D4EF: <font size=14>Inputs</font>
+----
+
+*<U+00A0>""$TYPE_Y_SAMPLE_POOL_TABLE"": These are samples of type y
+
+*<U+00A0>""sample_size"": How many samples to collect
+]
+-> \n;
+
+partition "**operator** OperatorFooBar " {
+    : **LIMIT** ""$TYPE_Y_SAMPLE_POOL_TABLE"" to ""sample_size"";
+    : **SET** ""field_a = 'a'"" on all samples;
+    :\t  **SET** ""$SEND_FOR_LABELING_COLUMN = (sample IN $SAMPLE_LABELS_TABLE)""  \t;
+    :**WRITE** result to $DAILY_COLLECTED_SAMPLES_TABLE table;
+}
+
+stop
+@enduml

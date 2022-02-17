@@ -1,0 +1,106 @@
+@startuml
+!include ./constants.puml
+
+hide circle
+skinparam linetype ortho
+skinparam wrapWidth 350
+
+left header
+
+\t<font size=22 color=black>Entity Relation Diagram</font>
+
+
+end header
+
+!global $TABLE_1 = 'table 1'
+!global $TABLE_1_TYPE = 'BigQuery'
+!global $TABLE_1_DESC = 'Description for table 1'
+
+!global $TABLE_2 = 'table 2'
+!global $TABLE_2_TYPE = 'BigQuery'
+!global $TABLE_2_DESC = 'Description for table 2'
+
+!global $TABLE_3 = 'table 3'
+!global $TABLE_3_TYPE = 'BigQuery'
+!global $TABLE_3_DESC = 'Description for table 3'
+
+!global $TABLE_4 = 'table 4'
+!global $TABLE_4_TYPE = 'BigQuery'
+!global $TABLE_4_DESC = 'Description for table 4'
+
+entity "**$TABLE_1**" {
+  **$TABLE_1_TYPE**
+
+  $TABLE_1_DESC
+  ..
+  + ""id"": //string //
+  --
+  * ""some_id"": //string //: Description for some_id
+  * ""some_id_2"": //string// : Description for some_id_2
+  * ""config"": // JSON //: Description for config
+}
+
+entity "**$TABLE_2**" {
+  **$TABLE_2_TYPE**
+
+  $TABLE_2_DESC
+  ..
+  + ""id_1"": //string //
+  + ""id_2"": //string //
+  --
+  * ""label"": //string //: Description for label
+  * ""scheduled_at"": //timestamp //: Description for scheduled_at
+  * ""foo_bar_ts"": //timestamp //: Description for foo_bar_ts
+  * ""baz_ts"": //timestamp //: Description for baz_ts
+  * ""abc_ts"": //timestamp //: Description for abc_ts
+}
+
+entity "**$TABLE_3**" {
+  **$TABLE_3_TYPE**
+
+  $TABLE_3_DESC
+  ..
+  + ""id"": //string //
+  --
+  * ""thingy_id"": //string //: Description for thingy_id
+  * ""config"": // JSON //: Configuration used
+}
+
+entity "**$DAILY_COLLECTED_SAMPLES_TABLE**" {
+  **$DAILY_COLLECTED_SAMPLES_TYPE**
+
+  $DAILY_COLLECTED_SAMPLES_DESC
+  ..
+  + ""$CONTENT_ID_COLUMN"": //string //
+  --
+  *""strategy"": //string //: Description of strategy
+  *""$SEND_FOR_LABELING_COLUMN"": //boolean //: Description of send for labeling
+  ..
+  Metadata Columns
+  *""model_score"": //number //
+  *""num_views"": //number //
+  *""is_awesome"": //boolean //
+  .
+  .
+  .
+}
+
+entity "**$TABLE_4**" {
+  **$TABLE_4_TYPE**
+
+  $TABLE_4_DESC
+  ..
+  + ""id"": //string//
+  --
+  *""name"": //string  //: Description of name
+  *""value"": //string  //: Description of value
+  *""labeler_id"": //string //: Description of labeler_id
+  *""source"": //string //: Description of source
+  *""some_other_field"": //string //: Description of some_other_field
+}
+
+"**$TABLE_1**" }o-- "**$TABLE_2**"
+"**$TABLE_2**" }o-- "**$TABLE_3**"
+"**$TABLE_2**" }o-- "**$TABLE_4**"
+
+@enduml

@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# TODO: Add command that checks if there are any changes to renderable files before running to prevent from running when there are no changes.
+node bin/index.js --output-images --image-formats both && git add "$(git rev-parse --show-toplevel)"
