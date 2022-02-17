@@ -1,0 +1,79 @@
+@startuml
+!include ./styles.puml
+!include ./constants.puml
+
+center header
+
+\t<font size=22 color=black>Sampler A - Activity Diagram</font>
+
+
+end header
+
+start
+#E4D4EF: <font size=14>Inputs</font>
+----
+
+*<U+00A0>""sample_padding_factor"": Description of // sample_padding_factor //
+
+*<U+00A0>""sample_strategies"": Description of // sample_strategies //
+
+*<U+00A0>""$TYPE_X_SAMPLE_POOL_TABLE"": $SAMPLE_POOL_TABLE_DESC()
+]
+-> \n;
+
+partition "**operator** OperatorABC " {
+    :**REMOVE** samples of type x from ""$TYPE_X_SAMPLE_POOL_TABLE"" //i.e.//
+
+    ""SELECT * FROM $TYPE_X_SAMPLE_POOL_TABLE EXCEPT DISTINCT (SELECT * FROM $DAILY_COLLECTED_SAMPLES_TABLE)"";
+    while(""**FOR EACH:** sampling_strategy"")
+        #E5E5E5: Create sub-query table ]
+        #E5E5E5: ""LIMIT"" = ""sampling_strategy.sample_size * sample_padding_factor""]
+        #E5E5E5: ""SELECT sampling_strategy.name AS strategy"" (to add strategy column)]
+        #LightBlue: <size: 11>**NEXT:** ""sampling_strategy"">
+    endwhile;
+    : ""UNION ALL"" strategy tables;
+    : **DEDUPLICATE** samples by adding the """strategies""" column. For each duplicate add the strategy to the
+     ""strategies"" column in the distinct row. //i.e.//
+
+     ""SELECT ARRAY_AGG(strategy) as strategies... FROM all_strategies_table GROUP BY uid"";
+    : **SAVE** subquery to ""distinct_type_x_sample_pool"" table;
+}
+-> \n;
+-> \n;
+#E4D4EF: <font size=14>Outputs</font>
+----
+
+*<U+00A0>""distinct_type_x_sample_pool"": Description of //distinct_type_x_sample_pool// output
+
+]
+-> \n;
+-> \n;
+partition "**operator** OperatorDEF\n<font size=10>Note: [[https://google.com More details on algorithm here]]</font>  " {
+    :**SET** variable...  ""extra_space **=** COUNT(*) of $DAILY_COLLECTED_SAMPLES_TABLE WHERE $SEND_FOR_LABELING_COLUMN = TRUE"";
+    #LightBlue:while(""**FOR EACH:** sampling_strategy"")
+        #E5E5E5: ""samples_for_strategy = SELECT * WHERE sampling_strategy.name IN strategies ORDER BY len(strategies) ASC""]
+
+        #E5E5E5: **""WHILE len(samples_for_strategy) > sampling_strategy.sample_size:""**
+
+        ****<U+00A0> bla bla bla
+        ****<U+00A0> code code code;
+
+        #E5E5E5: **""FOR sample IN samples_for_strategy""**
+
+        ****<U+00A0> 1234
+        ****<U+00A0> 5678]
+        #E5E5E5: **IS** ""len(strategy_samples)"" **less than** ""strategy.sample_size"" **?**]
+        split
+            <<true>>: **Yes** ]
+            <<true>>: ""extra_space += sampling_strategy.sample_size - len(strategy_samples)""]
+        split again
+            #FFFFFF: **No** ]
+            #FFFFFF:  \t\t\t\t\t\t Do nothing \t\t\t\t\t\t]
+        end split
+        #LightBlue: <size: 11>**NEXT:** ""sampling_strategy"">
+    endwhile;
+    : **REALLOCATE** ""extra_space"" to increase the sample sizes of strategies whose size was reduced;
+    : **WRITE** output to ""$SAMPLE_LABELS_TABLE"" table;
+}
+stop
+@enduml

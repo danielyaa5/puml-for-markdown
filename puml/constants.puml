@@ -1,0 +1,32 @@
+@startuml
+' Tables
+!global $TYPE_X_SAMPLE_POOL_TABLE = "type_x_sample_pool"
+!global $TYPE_Y_SAMPLE_POOL_TABLE = "type_y_sample_pool"
+!unquoted procedure $SAMPLE_POOL_TABLE_DESC()
+A subquery from which to query samples, should be joined to any
+columns that you want to include in the $DAILY_COLLECTED_SAMPLES_TABLE table
+!endprocedure
+
+!global $SAMPLE_LABELS_TABLE = "some_other_label_db"
+!global $SAMPLE_LABELS_ID = "sampleLabelsDb"
+!global $SAMPLE_LABELS_CONTAINER_DESC = $LABELED_DATASOURCE_DESC
+!global $SAMPLE_LABELS_COMPONENT_DESC = "Stores all samples which have been labeled.\n"
+!global $SAMPLE_LABELS_TYPE = "BigTable"
+!global $SAMPLE_LABELS_SCHEMA = "https://docs.google.com/spreadsheets"
+
+!global $DAILY_COLLECTED_SAMPLES_TABLE = "type_y_samples_{date}"
+!global $DAILY_COLLECTED_SAMPLES_ID = "dailySamplesDb"
+!global $DAILY_COLLECTED_SAMPLES_DESC = "A days worth of samples collected during single run of the pipeline.\n"
+!global $DAILY_COLLECTED_SAMPLES_TYPE = "BigQueryDailyTable"
+
+!global $LABELED_DATASOURCE_ID = "labeledDatasource"
+!global $LABELED_DATASOURCE_NAME = "labeled_datasource_bucket"
+!global $LABELED_DATASOURCE_TYPE = "GCS"
+!global $LABELED_DATASOURCE_DESC = "Where the labelers write their labeling results"
+
+'Columns
+!global $SEND_FOR_LABELING_COLUMN = "send_for_labeling"
+!global $CONTENT_ID_COLUMN = "some_id"
+
+!global $SYSTEM_NAME = "My Project Name"
+@enduml

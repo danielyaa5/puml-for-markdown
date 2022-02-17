@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1944px" preserveAspectRatio="none" style="width:1078px;height:1944px;" version="1.1" viewBox="0 0 1078 1944" width="1078px" zoomAndPan="magnify"><defs><style type="text/css"><![CDATA[*.f_888888_777777 {fill:#888888;}*.f_222222_dddddd {fill:#222222;}*.s_222222_dddddd {stroke:#222222;}*.s_181818_e7e7e7 {stroke:#181818;}*.f_000000_ffffff {fill:#000000;}*.s_000000_ffffff {stroke:#000000;}*.f_f1f1f1_070707 {fill:#f1f1f1;}*.f_181818_e7e7e7 {fill:#181818;}@media (prefers-color-scheme:dark) {*.f_888888_777777 {fill:#777777;}*.f_222222_dddddd {fill:#dddddd;}*.s_222222_dddddd {stroke:#dddddd;}*.s_181818_e7e7e7 {stroke:#e7e7e7;}*.f_000000_ffffff {fill:#ffffff;}*.s_000000_ffffff {stroke:#ffffff;}*.f_f1f1f1_070707 {fill:#070707;}*.f_181818_e7e7e7 {fill:#e7e7e7;}}]]></style></defs><g><rect height="60.5313" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="346" x="364.5" y="10"/><text class="f_888888_777777" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="0" x="710.5" y="19.2822"/><text fill="#000000" font-family="sans-serif" font-size="22" lengthAdjust="spacing" textLength="322" x="388.5" y="42.0615">Sampler A - Activity Diagram</text><text class="f_888888_777777" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="0" x="710.5" y="56.5322"/><text class="f_888888_777777" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="0" x="710.5" y="68.1729"/><ellipse class="f_222222_dddddd s_222222_dddddd" cx="539" cy="81.5313" rx="10" ry="10" style="stroke-width:1.0;"/><rect class="s_181818_e7e7e7" fill="#E4D4EF" height="159.3409" style="stroke-width:0.5;" width="569" x="254.5" y="111.5313"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="268.5" y="134.998"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="268.5" y="134.5264">Inputs</text><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="254.5" x2="823.5" y1="142.8281" y2="142.8281"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="268.5" y="158.9668"/><ellipse class="f_000000_ffffff s_000000_ffffff" cx="270" cy="168.697" rx="2.5" ry="2.5" style="stroke-width:0.0;"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="4" x="276.5" y="173.3669"> </text><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="147" x="280.5" y="172.909">sample_padding_factor</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="93" x="427.5" y="173.3669">: Description of</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="140" x="528.5" y="173.3669">sample_padding_factor</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="268.5" y="187.3356"/><ellipse class="f_000000_ffffff s_000000_ffffff" cx="270" cy="197.0658" rx="2.5" ry="2.5" style="stroke-width:0.0;"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="4" x="276.5" y="201.7357"> </text><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="119" x="280.5" y="201.2778">sample_strategies</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="93" x="399.5" y="201.7357">: Description of</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="108" x="500.5" y="201.7357">sample_strategies</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="268.5" y="215.7045"/><ellipse class="f_000000_ffffff s_000000_ffffff" cx="270" cy="225.4347" rx="2.5" ry="2.5" style="stroke-width:0.0;"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="4" x="276.5" y="230.1046"> </text><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="126" x="280.5" y="229.6467">type_x_sample_pool</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="407" x="406.5" y="230.1046">: A subquery from which to query samples, should be joined to any</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="416" x="264.5" y="244.0733">columns that you want to include in the type_y_samples_{date} table</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="268.5" y="258.0421"/><rect class="s_000000_ffffff" fill="none" height="614.7728" style="stroke-width:1.5;" width="675" x="201.5" y="306.9274"/><path class="s_000000_ffffff" d="M386.5,306.9274 L386.5,316.2242 L376.5,326.2242 L201.5,326.2242 " fill="none" style="stroke-width:1.5;"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="71" x="204.5" y="320.9225">operator</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="279.5" y="320.9225">OperatorABC</text><rect class="f_f1f1f1_070707 s_181818_e7e7e7" height="62.769" rx="12.5" ry="12.5" style="stroke-width:0.5;" width="622" x="228" y="343.2242"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="57" x="238" y="364.7943">REMOVE</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="141" x="299" y="364.7943">samples of type x from</text><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="126" x="444" y="364.3363">type_x_sample_pool</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="574" y="364.7943"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="18" x="574" y="364.7943">i.e.</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="242" y="378.763"/><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="602" x="238" y="392.7052">SELECT * FROM type_x_sample_pool EXCEPT DISTINCT (SELECT * FROM type_y_samples_{date})</text><rect class="s_181818_e7e7e7" fill="#E5E5E5" height="33.9688" style="stroke-width:0.5;" width="168" x="455" y="469.9932"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="140" x="469" y="491.1319">Create sub-query table</text><rect class="s_181818_e7e7e7" fill="#E5E5E5" height="34.4001" style="stroke-width:0.5;" width="448" x="315" y="523.9619"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="329" y="545.532"/><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="35" x="329" y="545.074">LIMIT</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="10" x="368" y="545.532">=</text><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="371" x="382" y="545.074">sampling_strategy.sample_size * sample_padding_factor</text><rect class="s_181818_e7e7e7" fill="#E5E5E5" height="34.4001" style="stroke-width:0.5;" width="465" x="306.5" y="593.362"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="320.5" y="614.9321"/><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="287" x="320.5" y="614.4741">SELECT sampling_strategy.name AS strategy</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="150" x="611.5" y="614.9321">(to add strategy column)</text><polygon class="s_181818_e7e7e7" fill="#ADD8E6" points="447,647.7621,631,647.7621,641,664.7465,631,681.7309,447,681.7309" style="stroke-width:0.5;"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="461" y="668.9008"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="37" x="461" y="669.1366">NEXT:</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="502" y="669.1366"/><text class="f_000000_ffffff" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="119" x="502" y="668.7169">sampling_strategy</text><polygon class="s_181818_e7e7e7" fill="#ADD8E6" points="444.5,425.9932,633.5,425.9932,645.5,437.9932,633.5,449.9932,444.5,449.9932,432.5,437.9932,444.5,425.9932" style="stroke-width:0.5;"/><text class="f_000000_ffffff" font-family="monospace" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="63" x="444.5" y="441.5352">FOR EACH:</text><text class="f_000000_ffffff" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="119" x="514.5" y="441.5792">sampling_strategy</text><rect class="f_f1f1f1_070707 s_181818_e7e7e7" height="34.4001" rx="12.5" ry="12.5" style="stroke-width:0.5;" width="182" x="448" y="723.7309"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="462" y="745.3009"/><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="63" x="462" y="744.843">UNION ALL</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="91" x="529" y="745.3009">strategy tables</text><rect class="f_f1f1f1_070707 s_181818_e7e7e7" height="77.1691" rx="12.5" ry="12.5" style="stroke-width:0.5;" width="655" x="211.5" y="778.131"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="225.5" y="799.701"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="94" x="225.5" y="799.701">DEDUPLICATE</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="138" x="323.5" y="799.701">samples by adding the</text><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="77" x="465.5" y="799.2431">"strategies</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="314" x="542.5" y="799.701">" column. For each duplicate add the strategy to the</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="225.5" y="814.1011"/><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="70" x="225.5" y="813.6432">strategies</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="157" x="299.5" y="814.1011">column in the distinct row.</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="18" x="460.5" y="814.1011">i.e.</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="225.5" y="828.0699"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="225.5" y="842.47"/><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="574" x="225.5" y="842.012">SELECT ARRAY_AGG(strategy) as strategies... FROM all_strategies_table GROUP BY uid</text><rect class="f_f1f1f1_070707 s_181818_e7e7e7" height="34.4001" rx="12.5" ry="12.5" style="stroke-width:0.5;" width="363" x="357.5" y="875.3"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="371.5" y="896.8701"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="35" x="371.5" y="896.8701">SAVE</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="73" x="410.5" y="896.8701">subquery to</text><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="189" x="487.5" y="896.4121">distinct_type_x_sample_pool</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="30" x="680.5" y="896.8701">table</text><rect class="s_181818_e7e7e7" fill="#E4D4EF" height="102.6032" style="stroke-width:0.5;" width="535" x="271.5" y="973.7153"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="285.5" y="997.1821"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="285.5" y="996.7104">Outputs</text><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="271.5" x2="806.5" y1="1005.0121" y2="1005.0121"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="285.5" y="1021.1508"/><ellipse class="f_000000_ffffff s_000000_ffffff" cx="287" cy="1030.881" rx="2.5" ry="2.5" style="stroke-width:0.0;"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="4" x="293.5" y="1035.5509"> </text><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="189" x="297.5" y="1035.093">distinct_type_x_sample_pool</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="93" x="486.5" y="1035.5509">: Description of</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="171" x="583.5" y="1035.5509">distinct_type_x_sample_pool</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="38" x="758.5" y="1035.5509">output</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="285.5" y="1049.5197"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="285.5" y="1063.4884"/><rect class="s_000000_ffffff" fill="none" height="787.3978" style="stroke-width:1.5;" width="1056" x="11" y="1104.2252"/><path class="s_000000_ffffff" d="M228,1104.2252 L228,1129.819 L218,1139.819 L11,1139.819 " fill="none" style="stroke-width:1.5;"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="71" x="14" y="1118.2204">operator</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="89" y="1118.2204">OperatorDEF</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="29" x="14" y="1135.4606">Note:</text><a href="https://google.com" target="_top" title="https://google.com" xlink:actuate="onRequest" xlink:href="https://google.com" xlink:show="new" xlink:title="https://google.com" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" text-decoration="underline" textLength="167" x="46" y="1135.4606">More details on algorithm here</text></a><text class="f_000000_ffffff" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="221" y="1134.5172"/><rect class="f_f1f1f1_070707 s_181818_e7e7e7" height="34.4001" rx="12.5" ry="12.5" style="stroke-width:0.5;" width="662" x="208" y="1156.819"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="27" x="218" y="1178.389">SET</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="57" x="249" y="1178.389">variable...</text><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="77" x="314" y="1177.9311">extra_space</text><text class="f_000000_ffffff" font-family="monospace" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="7" x="398" y="1177.8831">=</text><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="448" x="412" y="1177.9311">COUNT(*) of type_y_samples_{date} WHERE send_for_labeling = TRUE</text><rect class="s_181818_e7e7e7" fill="#E5E5E5" height="34.4001" style="stroke-width:0.5;" width="745" x="166.5" y="1255.2191"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="180.5" y="1276.7891"/><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="721" x="180.5" y="1276.3312">samples_for_strategy = SELECT * WHERE sampling_strategy.name IN strategies ORDER BY len(strategies) ASC</text><rect class="s_181818_e7e7e7" fill="#E5E5E5" height="76.3064" rx="12.5" ry="12.5" style="stroke-width:0.5;" width="472" x="303" y="1309.6192"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="317" y="1331.1892"/><text class="f_000000_ffffff" font-family="monospace" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="448" x="317" y="1330.6833">WHILE len(samples_for_strategy) &gt; sampling_strategy.sample_size:</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="317" y="1345.158"/><rect class="f_000000_ffffff s_000000_ffffff" height="3.5" style="stroke-width:0.0;" width="3.5" x="356" y="1353.9568"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="70" x="361" y="1359.1267">  bla bla bla</text><rect class="f_000000_ffffff s_000000_ffffff" height="3.5" style="stroke-width:0.0;" width="3.5" x="356" y="1367.9255"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="109" x="361" y="1373.0955">  code code code</text><rect class="s_181818_e7e7e7" fill="#E5E5E5" height="76.3064" style="stroke-width:0.5;" width="262" x="408" y="1405.9255"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="422" y="1427.4956"/><text class="f_000000_ffffff" font-family="monospace" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="238" x="422" y="1426.9896">FOR sample IN samples_for_strategy</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="422" y="1441.4643"/><rect class="f_000000_ffffff s_000000_ffffff" height="3.5" style="stroke-width:0.0;" width="3.5" x="461" y="1450.2631"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="39" x="466" y="1455.4331">  1234</text><rect class="f_000000_ffffff s_000000_ffffff" height="3.5" style="stroke-width:0.0;" width="3.5" x="461" y="1464.2319"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="40" x="466" y="1469.4018">  5678</text><rect class="s_181818_e7e7e7" fill="#E5E5E5" height="34.4001" style="stroke-width:0.5;" width="414" x="332" y="1511.8694"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="346" y="1533.4395"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="13" x="346" y="1533.4395">IS</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="363" y="1533.4395"/><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="147" x="363" y="1532.9815">len(strategy_samples)</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="514" y="1533.4395"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="67" x="514" y="1533.4395">less than</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="585" y="1533.4395"/><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="140" x="585" y="1532.9815">strategy.sample_size</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="729" y="1533.4395"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="7" x="729" y="1533.4395">?</text><line class="s_181818_e7e7e7" style="stroke-width:1.5;" x1="291" x2="803" y1="1566.2695" y2="1566.2695"/><rect class="s_181818_e7e7e7" fill="#000000" height="33.9688" style="stroke-width:0.5;" width="53" x="264.5" y="1586.2695"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="278.5" y="1607.4082"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="25" x="278.5" y="1607.4082">Yes</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="307.5" y="1607.4082"/><rect class="s_181818_e7e7e7" fill="#000000" height="34.4001" style="stroke-width:0.5;" width="500" x="41" y="1640.454"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="55" y="1662.024"/><text fill="#FFFFFF" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="476" x="55" y="1661.566">extra_space += sampling_strategy.sample_size - len(strategy_samples)</text><rect class="s_181818_e7e7e7" fill="#FFFFFF" height="33.9688" style="stroke-width:0.5;" width="47" x="779.5" y="1586.4852"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="793.5" y="1607.6239"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="19" x="793.5" y="1607.6239">No</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="816.5" y="1607.6239"/><rect class="s_181818_e7e7e7" fill="#FFFFFF" height="33.9688" style="stroke-width:0.5;" width="468" x="569" y="1640.6696"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="587" y="1661.8083"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="65" x="775" y="1661.8083">Do nothing</text><line class="s_181818_e7e7e7" style="stroke-width:1.5;" x1="291" x2="803" y1="1694.8541" y2="1694.8541"/><polygon class="s_181818_e7e7e7" fill="#ADD8E6" points="447,1714.8541,631,1714.8541,641,1731.8384,631,1748.8228,447,1748.8228" style="stroke-width:0.5;"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="461" y="1735.9927"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="37" x="461" y="1736.2286">NEXT:</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="502" y="1736.2286"/><text class="f_000000_ffffff" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="119" x="502" y="1735.8088">sampling_strategy</text><polygon class="s_181818_e7e7e7" fill="#ADD8E6" points="444.5,1211.2191,633.5,1211.2191,645.5,1223.2191,633.5,1235.2191,444.5,1235.2191,432.5,1223.2191,444.5,1211.2191" style="stroke-width:0.5;"/><text class="f_000000_ffffff" font-family="monospace" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="63" x="444.5" y="1226.7611">FOR EACH:</text><text class="f_000000_ffffff" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="119" x="514.5" y="1226.8051">sampling_strategy</text><rect class="f_f1f1f1_070707 s_181818_e7e7e7" height="34.4001" rx="12.5" ry="12.5" style="stroke-width:0.5;" width="610" x="234" y="1790.8228"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="248" y="1812.3928"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="89" x="248" y="1812.3928">REALLOCATE</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="341" y="1812.3928"/><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="77" x="341" y="1811.9349">extra_space</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="412" x="422" y="1812.3928">to increase the sample sizes of strategies whose size was reduced</text><rect class="f_f1f1f1_070707 s_181818_e7e7e7" height="34.4001" rx="12.5" ry="12.5" style="stroke-width:0.5;" width="297" x="390.5" y="1845.2229"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="0" x="404.5" y="1866.7929"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="44" x="404.5" y="1866.7929">WRITE</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="54" x="452.5" y="1866.7929">output to</text><text class="f_000000_ffffff" font-family="monospace" font-size="12" lengthAdjust="spacing" textLength="133" x="510.5" y="1866.335">some_other_label_db</text><text class="f_000000_ffffff" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="30" x="647.5" y="1866.7929">table</text><ellipse class="s_222222_dddddd" cx="539" cy="1922.623" rx="11" ry="11" style="stroke-width:1.0;fill:none;"/><ellipse class="f_222222_dddddd" cx="539" cy="1922.623" rx="6" ry="6" style="stroke:#111111;stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="91.5313" y2="111.5313"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,101.5313,539,111.5313,543,101.5313,539,105.5313" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="503.9619" y2="523.9619"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,513.9619,539,523.9619,543,513.9619,539,517.9619" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="558.362" y2="593.362"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,583.362,539,593.362,543,583.362,539,587.362" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="627.7621" y2="647.7621"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,637.7621,539,647.7621,543,637.7621,539,641.7621" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="449.9932" y2="469.9932"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,459.9932,539,469.9932,543,459.9932,539,463.9932" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="681.7309" y2="691.7309"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="783.5" y1="691.7309" y2="691.7309"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="779.5,573.862,783.5,563.862,787.5,573.862,783.5,569.862" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="783.5" x2="783.5" y1="437.9932" y2="691.7309"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="783.5" x2="645.5" y1="437.9932" y2="437.9932"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="655.5,433.9932,645.5,437.9932,655.5,441.9932,651.5,437.9932" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="432.5" x2="294.5" y1="437.9932" y2="437.9932"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="290.5,559.862,294.5,569.862,298.5,559.862,294.5,563.862" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="294.5" x2="294.5" y1="437.9932" y2="703.7309"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="294.5" x2="539" y1="703.7309" y2="703.7309"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="703.7309" y2="723.7309"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,713.7309,539,723.7309,543,713.7309,539,717.7309" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="405.9932" y2="425.9932"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,415.9932,539,425.9932,543,415.9932,539,419.9932" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="758.131" y2="778.131"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,768.131,539,778.131,543,768.131,539,772.131" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="855.3" y2="875.3"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,865.3,539,875.3,543,865.3,539,869.3" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="270.8722" y2="343.2242"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,333.2242,539,343.2242,543,333.2242,539,337.2242" style="stroke-width:1.0;"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="547" y="292.1769"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="547" y="304.9816"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="909.7001" y2="973.7153"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,963.7153,539,973.7153,543,963.7153,539,967.7153" style="stroke-width:1.0;"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="547" y="939.4106"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="547" y="952.2153"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="1289.6192" y2="1309.6192"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,1299.6192,539,1309.6192,543,1299.6192,539,1303.6192" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="1385.9255" y2="1405.9255"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,1395.9255,539,1405.9255,543,1395.9255,539,1399.9255" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="1482.2319" y2="1511.8694"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,1501.8694,539,1511.8694,543,1501.8694,539,1505.8694" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="291" x2="291" y1="1620.2383" y2="1640.454"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="287,1630.454,291,1640.454,295,1630.454,291,1634.454" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="803" x2="803" y1="1620.454" y2="1640.6696"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="799,1630.6696,803,1640.6696,807,1630.6696,803,1634.6696" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="291" x2="291" y1="1567.7695" y2="1586.2695"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="287,1576.2695,291,1586.2695,295,1576.2695,291,1580.2695" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="803" x2="803" y1="1567.7695" y2="1586.4852"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="799,1576.4852,803,1586.4852,807,1576.4852,803,1580.4852" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="291" x2="291" y1="1674.8541" y2="1694.8541"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="287,1684.8541,291,1694.8541,295,1684.8541,291,1688.8541" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="803" x2="803" y1="1674.6384" y2="1694.8541"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="799,1684.8541,803,1694.8541,807,1684.8541,803,1688.8541" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="1546.2695" y2="1566.2695"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,1556.2695,539,1566.2695,543,1556.2695,539,1560.2695" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="1696.3541" y2="1714.8541"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,1704.8541,539,1714.8541,543,1704.8541,539,1708.8541" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="1235.2191" y2="1255.2191"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,1245.2191,539,1255.2191,543,1245.2191,539,1249.2191" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="1748.8228" y2="1758.8228"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="1051" y1="1758.8228" y2="1758.8228"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="1047,1506.2319,1051,1496.2319,1055,1506.2319,1051,1502.2319" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="1051" x2="1051" y1="1223.2191" y2="1758.8228"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="1051" x2="645.5" y1="1223.2191" y2="1223.2191"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="655.5,1219.2191,645.5,1223.2191,655.5,1227.2191,651.5,1223.2191" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="432.5" x2="27" y1="1223.2191" y2="1223.2191"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="23,1492.2319,27,1502.2319,31,1492.2319,27,1496.2319" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="27" x2="27" y1="1223.2191" y2="1770.8228"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="27" x2="539" y1="1770.8228" y2="1770.8228"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="1770.8228" y2="1790.8228"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,1780.8228,539,1790.8228,543,1780.8228,539,1784.8228" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="1191.2191" y2="1211.2191"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,1201.2191,539,1211.2191,543,1201.2191,539,1205.2191" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="1825.2229" y2="1845.2229"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,1835.2229,539,1845.2229,543,1835.2229,539,1839.2229" style="stroke-width:1.0;"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="1076.3185" y2="1156.819"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,1146.819,539,1156.819,543,1146.819,539,1150.819" style="stroke-width:1.0;"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="547" y="1097.6232"/><text class="f_000000_ffffff" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="547" y="1110.4279"/><line class="s_181818_e7e7e7" style="stroke-width:1.0;" x1="539" x2="539" y1="1879.623" y2="1911.623"/><polygon class="f_181818_e7e7e7 s_181818_e7e7e7" points="535,1901.623,539,1911.623,543,1901.623,539,1905.623" style="stroke-width:1.0;"/><!--MD5=[eb85d9ac0e6da13ddd37cdfe723b7941]
+@startuml
+<style>
+    activityDiagram {
+        diamond {
+            BackgroundColor LightBlue
+        }
+
+        .input {
+            MaximumWidth 500
+            BackgroundColor #E4D4EF
+        }
+    }
+    * {
+    }
+
+    .true {
+        FontColor White
+        BackgroundColor Black
+    }
+
+</style>
+
+
+
+' Tables
+!global $TYPE_X_SAMPLE_POOL_TABLE = "type_x_sample_pool"
+!global $TYPE_Y_SAMPLE_POOL_TABLE = "type_y_sample_pool"
+!unquoted procedure $SAMPLE_POOL_TABLE_DESC()
+A subquery from which to query samples, should be joined to any
+columns that you want to include in the $DAILY_COLLECTED_SAMPLES_TABLE table
+!endprocedure
+
+!global $SAMPLE_LABELS_TABLE = "some_other_label_db"
+!global $SAMPLE_LABELS_ID = "sampleLabelsDb"
+!global $SAMPLE_LABELS_CONTAINER_DESC = $LABELED_DATASOURCE_DESC
+!global $SAMPLE_LABELS_COMPONENT_DESC = "Stores all samples which have been labeled.\n"
+!global $SAMPLE_LABELS_TYPE = "BigTable"
+!global $SAMPLE_LABELS_SCHEMA = "https://docs.google.com/spreadsheets"
+
+!global $DAILY_COLLECTED_SAMPLES_TABLE = "type_y_samples_{date}"
+!global $DAILY_COLLECTED_SAMPLES_ID = "dailySamplesDb"
+!global $DAILY_COLLECTED_SAMPLES_DESC = "A days worth of samples collected during single run of the pipeline.\n"
+!global $DAILY_COLLECTED_SAMPLES_TYPE = "BigQueryDailyTable"
+
+!global $LABELED_DATASOURCE_ID = "labeledDatasource"
+!global $LABELED_DATASOURCE_NAME = "labeled_datasource_bucket"
+!global $LABELED_DATASOURCE_TYPE = "GCS"
+!global $LABELED_DATASOURCE_DESC = "Where the labelers write their labeling results"
+
+'Columns
+!global $SEND_FOR_LABELING_COLUMN = "send_for_labeling"
+!global $CONTENT_ID_COLUMN = "some_id"
+
+!global $SYSTEM_NAME = "My Project Name"
+
+
+
+center header
+
+\t<font size=22 color=black>Sampler A - Activity Diagram</font>
+
+
+end header
+
+start
+#E4D4EF: <font size=14>Inputs</font>
+- - - -
+
+*<U+00A0>""sample_padding_factor"": Description of // sample_padding_factor //
+
+*<U+00A0>""sample_strategies"": Description of // sample_strategies //
+
+*<U+00A0>""$TYPE_X_SAMPLE_POOL_TABLE"": $SAMPLE_POOL_TABLE_DESC()
+]
+-> \n;
+
+partition "**operator** OperatorABC " {
+    :**REMOVE** samples of type x from ""$TYPE_X_SAMPLE_POOL_TABLE"" //i.e.//
+
+    ""SELECT * FROM $TYPE_X_SAMPLE_POOL_TABLE EXCEPT DISTINCT (SELECT * FROM $DAILY_COLLECTED_SAMPLES_TABLE)"";
+    while(""**FOR EACH:** sampling_strategy"")
+        #E5E5E5: Create sub-query table ]
+        #E5E5E5: ""LIMIT"" = ""sampling_strategy.sample_size * sample_padding_factor""]
+        #E5E5E5: ""SELECT sampling_strategy.name AS strategy"" (to add strategy column)]
+        #LightBlue: <size: 11>**NEXT:** ""sampling_strategy"">
+    endwhile;
+    : ""UNION ALL"" strategy tables;
+    : **DEDUPLICATE** samples by adding the """strategies""" column. For each duplicate add the strategy to the
+     ""strategies"" column in the distinct row. //i.e.//
+
+     ""SELECT ARRAY_AGG(strategy) as strategies... FROM all_strategies_table GROUP BY uid"";
+    : **SAVE** subquery to ""distinct_type_x_sample_pool"" table;
+}
+-> \n;
+-> \n;
+#E4D4EF: <font size=14>Outputs</font>
+- - - -
+
+*<U+00A0>""distinct_type_x_sample_pool"": Description of //distinct_type_x_sample_pool// output
+
+]
+-> \n;
+-> \n;
+partition "**operator** OperatorDEF\n<font size=10>Note: [[https://google.com More details on algorithm here]]</font>  " {
+    :**SET** variable...  ""extra_space **=** COUNT(*) of $DAILY_COLLECTED_SAMPLES_TABLE WHERE $SEND_FOR_LABELING_COLUMN = TRUE"";
+    #LightBlue:while(""**FOR EACH:** sampling_strategy"")
+        #E5E5E5: ""samples_for_strategy = SELECT * WHERE sampling_strategy.name IN strategies ORDER BY len(strategies) ASC""]
+
+        #E5E5E5: **""WHILE len(samples_for_strategy) > sampling_strategy.sample_size:""**
+
+        ****<U+00A0> bla bla bla
+        ****<U+00A0> code code code;
+
+        #E5E5E5: **""FOR sample IN samples_for_strategy""**
+
+        ****<U+00A0> 1234
+        ****<U+00A0> 5678]
+        #E5E5E5: **IS** ""len(strategy_samples)"" **less than** ""strategy.sample_size"" **?**]
+        split
+            <<true>>: **Yes** ]
+            <<true>>: ""extra_space += sampling_strategy.sample_size - len(strategy_samples)""]
+        split again
+            #FFFFFF: **No** ]
+            #FFFFFF:  \t\t\t\t\t\t Do nothing \t\t\t\t\t\t]
+        end split
+        #LightBlue: <size: 11>**NEXT:** ""sampling_strategy"">
+    endwhile;
+    : **REALLOCATE** ""extra_space"" to increase the sample sizes of strategies whose size was reduced;
+    : **WRITE** output to ""$SAMPLE_LABELS_TABLE"" table;
+}
+stop
+@enduml
+
+@startuml
+<style>
+    activityDiagram {
+        diamond {
+            BackgroundColor LightBlue
+        }
+
+        .input {
+            MaximumWidth 500
+            BackgroundColor #E4D4EF
+        }
+    }
+    * {
+    }
+
+    .true {
+        FontColor White
+        BackgroundColor Black
+    }
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+center header
+
+\t<font size=22 color=black>Sampler A - Activity Diagram</font>
+
+
+end header
+
+start
+#E4D4EF: <font size=14>Inputs</font>
+- - - -
+
+*<U+00A0>""sample_padding_factor"": Description of // sample_padding_factor //
+
+*<U+00A0>""sample_strategies"": Description of // sample_strategies //
+
+*<U+00A0>""type_x_sample_pool"": A subquery from which to query samples, should be joined to any
+columns that you want to include in the type_y_samples_{date} table
+]
+-> \n;
+
+partition "**operator** OperatorABC " {
+    :**REMOVE** samples of type x from ""type_x_sample_pool"" //i.e.//
+
+    ""SELECT * FROM type_x_sample_pool EXCEPT DISTINCT (SELECT * FROM type_y_samples_{date})"";
+    while(""**FOR EACH:** sampling_strategy"")
+        #E5E5E5: Create sub-query table ]
+        #E5E5E5: ""LIMIT"" = ""sampling_strategy.sample_size * sample_padding_factor""]
+        #E5E5E5: ""SELECT sampling_strategy.name AS strategy"" (to add strategy column)]
+        #LightBlue: <size: 11>**NEXT:** ""sampling_strategy"">
+    endwhile;
+    : ""UNION ALL"" strategy tables;
+    : **DEDUPLICATE** samples by adding the """strategies""" column. For each duplicate add the strategy to the
+     ""strategies"" column in the distinct row. //i.e.//
+
+     ""SELECT ARRAY_AGG(strategy) as strategies... FROM all_strategies_table GROUP BY uid"";
+    : **SAVE** subquery to ""distinct_type_x_sample_pool"" table;
+}
+-> \n;
+-> \n;
+#E4D4EF: <font size=14>Outputs</font>
+- - - -
+
+*<U+00A0>""distinct_type_x_sample_pool"": Description of //distinct_type_x_sample_pool// output
+
+]
+-> \n;
+-> \n;
+partition "**operator** OperatorDEF\n<font size=10>Note: [[https://google.com More details on algorithm here]]</font>  " {
+    :**SET** variable...  ""extra_space **=** COUNT(*) of type_y_samples_{date} WHERE send_for_labeling = TRUE"";
+    #LightBlue:while(""**FOR EACH:** sampling_strategy"")
+        #E5E5E5: ""samples_for_strategy = SELECT * WHERE sampling_strategy.name IN strategies ORDER BY len(strategies) ASC""]
+
+        #E5E5E5: **""WHILE len(samples_for_strategy) > sampling_strategy.sample_size:""**
+
+        ****<U+00A0> bla bla bla
+        ****<U+00A0> code code code;
+
+        #E5E5E5: **""FOR sample IN samples_for_strategy""**
+
+        ****<U+00A0> 1234
+        ****<U+00A0> 5678]
+        #E5E5E5: **IS** ""len(strategy_samples)"" **less than** ""strategy.sample_size"" **?**]
+        split
+            <<true>>: **Yes** ]
+            <<true>>: ""extra_space += sampling_strategy.sample_size - len(strategy_samples)""]
+        split again
+            #FFFFFF: **No** ]
+            #FFFFFF:  \t\t\t\t\t\t Do nothing \t\t\t\t\t\t]
+        end split
+        #LightBlue: <size: 11>**NEXT:** ""sampling_strategy"">
+    endwhile;
+    : **REALLOCATE** ""extra_space"" to increase the sample sizes of strategies whose size was reduced;
+    : **WRITE** output to ""some_other_label_db"" table;
+}
+stop
+@enduml
+
+PlantUML version 1.2022.2beta5(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,37 @@
+@startuml
+
+'Icons
+!define FA_5_URL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/e53fd61259c0f2449edfe304cad83f51d0fbb5c1/font-awesome-5
+!include FA_5_URL/cloud.puml
+!include FA_5_URL/youtube.puml
+!include FA_5_URL/server.puml
+
+!define MATERIAL_URL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/e53fd61259c0f2449edfe304cad83f51d0fbb5c1/material
+!include MATERIAL_URL/zoom_in.puml
+
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+
+!include <office/Servers/database_server>
+!include <office/Servers/file_server>
+!include <office/Servers/application_server>
+!include <office/Concepts/service_application>
+!include <office/Concepts/firewall>
+
+!define AWS_PUML https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist
+!include AWS_PUML/AWSCommon.puml
+!include AWS_PUML/Robotics/RoboMaker.puml
+
+'Common Styling
+skinparam wrapWidth 250
+
+UpdateElementStyle("System", $bgColor="#ffffff", $fontColor="#000000", $shadowing="true")
+UpdateElementStyle("Person", $bgColor="#e0f1fb", $fontColor="#000000", $shape=RoundedBoxShape())
+
+AddElementTag("clickableText", $fontColor="purple")
+AddElementTag("button", $bgColor="#444444", $fontColor="#ffffff")
+AddElementTag("primary", $bgColor="#ffdb58", $fontColor="#000000", $shadowing="false", $borderColor="Gray")
+AddElementTag("highlightBoundary", $bgColor="#fce8ee")
+
+@enduml

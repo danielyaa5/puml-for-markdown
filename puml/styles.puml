@@ -1,0 +1,22 @@
+@startuml
+<style>
+    activityDiagram {
+        diamond {
+            BackgroundColor LightBlue
+        }
+
+        .input {
+            MaximumWidth 500
+            BackgroundColor #E4D4EF
+        }
+    }
+    * {
+    }
+
+    .true {
+        FontColor White
+        BackgroundColor Black
+    }
+
+</style>
+@enduml

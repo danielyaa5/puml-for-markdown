@@ -1,38 +1,47 @@
 {
-  "name": "puml-for-md",
-  "version": "0.0.1",
-  "description": "",
+  "name": "puml-for-markdown",
+  "version": "1.1.0",
+  "description": "An application to add interactive PUML diagrams to your github markdown files. If running with default arguments, run in project root directory.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky install"
+  },
   "author": "danielyaa5",
   "license": "ISC",
   "dependencies": {
     "bent": "7.3.12",
     "bluebird": "3.7.2",
     "commander": "8.2.0",
+    "gitignore-globs": "0.1.1",
     "glob": "7.2.0",
     "lodash": "4.17.21",
     "plantuml-encoder": "1.4.0",
     "tinyurl": "1.1.7"
   },
   "bin": {
-    "puml4md": "./bin/index.js"
+    "puml-for-markdown": "./bin/index.js"
   },
   "keywords": [
+    "uml",
     "puml",
-    "git",
-    "markdown",
-    "github",
-    "generator",
     "plantuml",
     "c4-plantuml",
     "c4",
     "diagrams",
-    "documentation",
-    "md"
+    "git",
+    "github",
+    "md",
+    "markdown",
+    "generator",
+    "cli",
+    "diagrams",
+    "documentation"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/danielyaa5/puml-for-markdown"
+  },
+  "devDependencies": {
+    "husky": "7.0.4"
   }
 }
