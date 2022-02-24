@@ -27,6 +27,9 @@ PlantUML diagrams are great for designing new projects but they don't work very 
 are some [workarounds](https://stackoverflow.com/questions/32203610/how-to-integrate-uml-diagrams-into-gitlab-or-github),
 but I found these to be unstable and they have a lot of caveats.
 
+Update: Github released support for embeddable Mermaid diagrams, but PlantUML is still unsupported,
+[see here](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) for more info.
+
 ### Installation
 `npm i -g puml-for-markdown`
 

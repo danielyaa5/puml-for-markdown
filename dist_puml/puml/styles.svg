@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="10px" preserveAspectRatio="none" style="width:10px;height:10px;background:#FFFFFF;" version="1.1" viewBox="0 0 10 10" width="10px" zoomAndPan="magnify"><defs/><g><!--MD5=[f5bae7c9953a8b2680bea2207d5e82c4]
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="10px" preserveAspectRatio="none" style="width:10px;height:10px;background:#FFFFFF;" version="1.1" viewBox="0 0 10 10" width="10px" zoomAndPan="magnify"><defs/><g><!--MD5=[8dff5d4fdb5e8b272d166e838d9a5307]
 @startuml
 <style>
     activityDiagram {
@@ -22,7 +22,7 @@
 </style>
 @enduml
 
-PlantUML version 1.2022.2beta6(Unknown compile time)
+PlantUML version 1.2022.2beta8(Unknown compile time)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
 JVM: Java HotSpot(TM) 64-Bit Server VM
