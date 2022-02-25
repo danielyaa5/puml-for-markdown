@@ -52,6 +52,11 @@ don't need to delete the rendered image or link.
 
 Optionally you can specify the CLI to output the diagram images as png and/or svg.
 
+### Simple CLI Usage
+Just run `puml-for-markdown` in any directory where you have markdown files and it will update the links in all markdown
+files, automatically ignoring anything in the gitignore file. The CLI has a lot of options for customization. See the
+section below for more details.
+
 ### CLI Usage
 ```
 Usage: puml-for-markdown [options]
