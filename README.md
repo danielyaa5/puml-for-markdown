@@ -1,9 +1,10 @@
 # puml-for-markdown
 
 ## Simple CLI Usage
-Just run `puml-for-markdown` in any directory where you have markdown files and it will render puml links in markdown
-comments. By default the entire directory is recursively searched, automatically ignoring anything in the gitignore
-file. The CLI has a lot of options for customization.
+Just run `puml-for-markdown` in any directory where you have markdown files and it will render links to PlantUML files
+in markdown comments. [PlantUML](https://plantuml.com) files allow you to create diagrams that are defined using a
+simple and intuitive language. By default the entire directory is recursively searched, automatically ignoring anything
+in the gitignore file.
 
 ## Examples
 The following examples are of a project I worked on, **yellow components will link you to another diagram**. Obviously the
