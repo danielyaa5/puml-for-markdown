@@ -35,7 +35,9 @@
     "generator",
     "cli",
     "diagrams",
-    "documentation"
+    "documentation",
+    "architecture",
+    "architecture-diagrams"
   ],
   "repository": {
     "type": "git",

@@ -1,5 +1,35 @@
 # puml-for-markdown
 
+## Simple CLI Usage
+Just run `puml-for-markdown` in any directory where you have markdown files and it will render puml links in markdown
+comments. By default the entire directory is recursively searched, automatically ignoring anything in the gitignore
+file. The CLI has a lot of options for customization.
+
+## Examples
+The following examples are of a project I worked on, **yellow components will link you to another diagram**. Obviously the
+diagram content has been obfuscated.
+
+### Embed a Diagram
+You can easily add an embedded diagram to your markdown. Simply add a link to the puml file in markdown comment like so:
+
+```
+<!--![Diagram Image Link](./puml/level_1_system_view.puml)-->
+```
+
+Here's the result. **Try clicking on the yellow blocks.**
+
+[![Diagram Image Link](https://tinyurl.com/y847en68)](https://tinyurl.com/y847en68)<!--![Diagram Image Link](./puml/level_1_system_view.puml)-->
+
+### Link Only
+To render a link to a puml diagram, do the same thing but exclude the `!`
+```
+<!--[Click to Open Interactive Diagram](./puml/level_1_system_view.puml)-->
+```
+
+which renders into
+
+[Click to Open Interactive Diagram](https://tinyurl.com/y847en68)<!--[Click to Open Interactive Diagram](./puml/level_1_system_view.puml)-->
+
 ## Goal
 The goal is to make PlantUML diagrams easily accessible from markdown, specifically GitHub flavored.
 * Should work with both private and public repositories
@@ -9,40 +39,33 @@ The goal is to make PlantUML diagrams easily accessible from markdown, specifica
 * Should support PlantUML [sprites](https://crashedmind.github.io/PlantUMLHitchhikersGuide/PlantUMLSpriteLibraries/plantuml_sprites.html) (small graphic images)
 * Any time you make changes to diagrams you should be able to run the CLI tool to update the markdown links
 
-## Examples
-The following examples are of a project I worked on, **yellow components will link you to another diagram**. Obviously the
-diagram content has been obfuscated.
-
-### Example With Link Only
-
-[Only Link](https://tinyurl.com/y847en68)<!--[Only Link](./puml/level_1_system_view.puml)-->
-
-### Example with Image, Click to Open Interactive Diagram
-
-[![Example With Graph Image](https://tinyurl.com/y847en68)](https://tinyurl.com/y847en68)<!--![Example With Graph Image](./puml/level_1_system_view.puml)-->
-
 ## Background
 [PlantUML](https://plantuml.com) allows you to create diagrams that are defined using a simple and intuitive language.
 PlantUML diagrams are great for designing new projects but they don't work very well in Github markdown preview. There
 are some [workarounds](https://stackoverflow.com/questions/32203610/how-to-integrate-uml-diagrams-into-gitlab-or-github),
 but I found these to be unstable and they have a lot of caveats.
 
-Update: Github released support for embeddable Mermaid diagrams, but PlantUML is still unsupported,
+**Update**: Github released support for embeddable Mermaid diagrams, but PlantUML is still unsupported,
 [see here](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) for more info.
 
-### Installation
-`npm i -g puml-for-markdown`
 
 ### Basic Usage
 Whenever you run the CLI it will add a tinyurl link to the rendered SVG next to the markdown comments referencing a
-puml diagram. E.g. `<!--[Example With Only Link](./puml/level_1_system_view.puml)-->` will be replaced with
+puml diagram. E.g.
+```
+<!--[Example With Only Link](./puml/level_1_system_view.puml)-->
+```
+will be replaced with
 ```
 [Example With Only Link](https://tinyurl.com/yfpclfpp)<!--[Example With Only Link](./puml/level_1_system_view.puml)-->
 ```
 
 When `!` is included in front of the markdown link, it will render the diagram image in the markdown. If the image is
-clicked it will open up the diagram. E.g. `<!--![Example With Graph Image](./puml/level_1_system_view.puml)-->` will be
-replaced with
+clicked it will open up the diagram. E.g.
+```
+<!--![Example With Graph Image](./puml/level_1_system_view.puml)-->
+```
+will be replaced with
 ```
 [![Example With Graph Image](https://tinyurl.com/yfpclfpp)](https://tinyurl.com/yfpclfpp)<!--![Example With Graph Image](./puml/level_1_system_view.puml)-->
 ```
@@ -50,14 +73,12 @@ replaced with
 If you want to update the link text or switch it between image and link, just update the comment and rerun the CLI. You
 don't need to delete the rendered image or link.
 
-Optionally you can specify the CLI to output the diagram images as png and/or svg.
+**Optionally you can specify the CLI to output the diagram images as png and/or svg.**
 
-### Simple CLI Usage
-Just run `puml-for-markdown` in any directory where you have markdown files and it will update the links in all markdown
-files, automatically ignoring anything in the gitignore file. The CLI has a lot of options for customization. See the
-section below for more details.
+### Installation
+`npm i -g puml-for-markdown`
 
-### CLI Usage
+### Detailed CLI Usage
 ```
 Usage: puml-for-markdown [options]
 
@@ -83,9 +104,10 @@ Options:
 - Currently doesn't support cyclic graph references, i.e. a diagram can't reference any diagrams which reference back
 to it
 - See the [pre-commit hook](./.husky/pre-commit) to see how to add a git hook
-- If you are saving diagram images and have puml files which only define constants/settings
-(i.e. [example](./puml/constants.puml)) these aren't renderable on their own (since there is nothing to render)
-and you'll see a warning in the console saying it failed to save the image to file.
+- If you are saving diagram images and have puml files which only define constants or settings
+(i.e. [example](./puml/constants.puml)) you'll see a warning in the console saying it failed to save the image to file
+because these aren't renderable on their own (since there is nothing to render)
+- Anything inside `inline code` or `code blocks` will be excluded from rendering
 
 ### How It Works
 #### Using PlantUML Web Service to Render PUML Diagrams
