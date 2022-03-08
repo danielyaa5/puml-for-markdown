@@ -11,7 +11,7 @@ The following examples are of a project I worked on, **yellow components will li
 diagram content has been obfuscated.
 
 ### Embed a Diagram
-You can easily add an embedded diagram to your markdown. Simply add a link to the puml file in markdown comment like so:
+You can easily add an embedded diagram to your markdown. Simply add a link to the puml file in a markdown comment like so:
 
 ```
 <!--![Diagram Image Link](./puml/level_1_system_view.puml)-->
