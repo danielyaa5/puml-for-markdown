@@ -13,6 +13,11 @@ const run = require(path.resolve(__dirname, '../index.js'))
 
 new Command()
     .description('An application to add interactive PUML diagrams to your github markdown files. If running with default arguments, run in project root directory.')
+    .option(
+        '-s, --puml-server-url <url>',
+        'This is the base URL used to render diagrams. Defaults to the public plantuml server.',
+        'https://www.plantuml.com/plantuml',
+    )
     .addOption(new Option(
             '-x, --root-directory <path>',
             'The path to your project'
@@ -39,7 +44,7 @@ new Command()
     )
     .option(
         '-g, --ignore-gitignore',
-        "Don't ignore files PUML and MD files in projects gitignore",
+        "Don't use .gitignore to skip PUML and MD",
     )
     .addOption(new Option(
             '-i, --gitignore-path <path>',
