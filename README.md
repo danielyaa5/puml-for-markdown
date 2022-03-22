@@ -74,25 +74,29 @@ will be replaced with
 If you want to update the link text or switch it between image and link, just update the comment and rerun the CLI. You
 don't need to delete the rendered image or link.
 
-**Optionally you can specify the CLI to output the diagram images as png and/or svg.**
-
 ### Installation
 `npm i -g puml-for-markdown`
 
-### Detailed CLI Usage
+### Advanced Usage
+Here are some other features supported
+- You can specify the CLI to output the diagram images as png and/or svg see `--output-images` and `--image-formats`
+- You can specify the PUML server used to render the diagrams see `--puml-server-url`
+
+### All CLI Options
 ```
 Usage: puml-for-markdown [options]
 
 An application to add interactive PUML diagrams to your github markdown files. If running with default arguments, run in project root directory.
 
 Options:
+  -s, --puml-server-url <url>      This is the base URL used to render diagrams. Defaults to the public plantuml server. (default: "https://www.plantuml.com/plantuml")
   -x, --root-directory <path>      The path to your project (default: CWD)
   -r, --hot-reload                 Rerun markdown generator every `interval` seconds, determined by interval option
   -v, --interval-seconds <number>  If --hot-reload is set, how often should it reload (default: 2)
   -p, --puml-directory <path>      Path to directory containing puml files which are referenced in markdown files (default: rootDirectory)
   -m, --markdown-directory <path>  Path to directory containing markdown files referencing puml files (default: rootDirectory)
-  -g, --respect-gitignore          Automatically ignore MD files in .gitignore paths (default: true)
-  -i, --gitignore-path <path>      If --respect-gitignore is set, use set this as path to .gitignore file. (default: rootDirectory/.gitignore)
+  -g, --ignore-gitignore           Don't use .gitignore to skip PUML and MD
+  -i, --gitignore-path <path>      Use this as path to .gitignore file. (default: rootDirectory/.gitignore)
   -d, --output-images              If set, will output images of diagrams to the dist directory
   -b, --dist-directory <path>      If --output-images is set, path to output diagram images (default: rootDirectory/dist_puml)
   -f, --image-formats <format>     If --output-images is set, sets the output image format (choices: "png", "svg", "both", default: "png")
