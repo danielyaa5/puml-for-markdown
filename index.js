@@ -17,17 +17,14 @@ const tiny = require('tinyurl');
 const parseGitIgnore = require('gitignore-globs');
 
 
-// CONSTANTS
-
-const PUML_SERVER = 'https://www.plantuml.com/plantuml'
-
 // HELPERS
 
 const getBuffer = bent('buffer')
 const mkdirIfDoesntExist = (p) => !fs.existsSync(p) && fs.mkdirSync(p, {recursive: true})
-const getPumlUrl = (imgFormat, encodedData, shorten) => shorten ?
-    tiny.shorten(getFullPumlUrl(imgFormat, encodedData)) : getFullPumlUrl(imgFormat, encodedData)
-const getFullPumlUrl = (imgFormat, encodedData) => `${PUML_SERVER}/${imgFormat}/${encodedData}}`
+const getPumlUrl = ({imgFormat, encodedData, shorten, pumlServerUrl}) => shorten ?
+    tiny.shorten(getFullPumlUrl({imgFormat, encodedData, pumlServerUrl})) :
+    getFullPumlUrl({imgFormat, encodedData, pumlServerUrl})
+const getFullPumlUrl = ({imgFormat, encodedData, pumlServerUrl}) => `${pumlServerUrl}/${imgFormat}/${encodedData}}`
 const mapUniqMatches = (s, re, mapper, match = re.exec(s), results = []) => {
     if (match) return mapUniqMatches(s, re, mapper, re.exec(s), results.concat([match]))
     return _.uniqBy(results, String).map(mapper)
@@ -58,11 +55,12 @@ const replaceMdIgnoringCode = (mdString, replaceFn) => {
 // DATA STRUCTURES
 
 class PumlLinks extends Map {
-    constructor(pumlPaths, shouldShortenLinks) {
+    constructor({ pumlPaths, shouldShortenLinks, pumlServerUrl }) {
         super();
         this.shouldShortenLinks = shouldShortenLinks
-        // Mark paths so we know which should be visited
-        // Any path that's not marked 0 we know isn't a puml path because it doesn't correspond to a puml fil
+        this.pumlServerUrl = pumlServerUrl
+        // We need to know which paths should be visited
+        // Any path that's not marked 0 we know isn't a puml path because it doesn't correspond to a puml file
         pumlPaths.forEach(p => this.set(p, 0))
     }
 
@@ -74,7 +72,9 @@ class PumlLinks extends Map {
         if (typeof v === 'number') return super.set(pumlPath, v)
 
         const encodedData = plantUmlEncoder.encode(v)
-        const url = await getPumlUrl('svg', encodedData, this.shouldShortenLinks)
+        const url = await getPumlUrl({
+            imgFormat: 'svg', encodedData, shorten: this.shouldShortenLinks, pumlServerUrl: this.pumlServerUrl
+        })
         return super.set(pumlPath, {encodedData, url, data: v});
     }
 
@@ -90,13 +90,13 @@ const downloadImg = async (outputPath, imgUrl) => {
     fs.writeFileSync(outputPath, imgBuffer)
 }
 
-const saveDiagram = async ({rootDirectory, distDirectory, pumlPath, imgFormat, encodedData}) => {
+const saveDiagram = async ({rootDirectory, distDirectory, pumlPath, imgFormat, encodedData, pumlServerUrl}) => {
     const outputPath = path.join(
         distDirectory, pumlPath.replace(rootDirectory, '').replace(/\.puml$/, `.${imgFormat}`)
     )
 
     mkdirIfDoesntExist(path.dirname(outputPath))
-    const imgUrl = getFullPumlUrl(imgFormat, encodedData)
+    const imgUrl = getFullPumlUrl({ imgFormat, encodedData, pumlServerUrl })
     try {
         await downloadImg(outputPath, imgUrl)
     } catch (e) {
@@ -105,12 +105,12 @@ const saveDiagram = async ({rootDirectory, distDirectory, pumlPath, imgFormat, e
     }
 }
 
-const saveDiagrams = async ({ rootDirectory, distDirectory, imageFormats, pumlLinks }) => {
+const saveDiagrams = async ({rootDirectory, distDirectory, imageFormats, pumlLinks, pumlServerUrl}) => {
     fs.rmSync(distDirectory, {recursive: true, force: true});
     for (let [pumlPath, {encodedData}] of pumlLinks) {
         for (let imgFormat of imageFormats) {
             await saveDiagram({
-                distDirectory, rootDirectory, pumlPath, imgFormat, encodedData
+                distDirectory, rootDirectory, pumlPath, imgFormat, encodedData, pumlServerUrl
             })
         }
     }
@@ -190,6 +190,7 @@ const processMdFile = async (mdPath, pumlLinks) => {
 
 const runOnce = async (
     {
+        pumlServerUrl,
         rootDirectory,
         markdownDirectory,
         pumlDirectory,
@@ -207,14 +208,16 @@ const runOnce = async (
     const ignore = respectGitignore ? parseGitIgnore(gitignorePath) : []
     const mdPaths = glob.sync(`${markdownDirectory}/**/*.md`, {ignore, nodir: true})
     const pumlPaths = glob.sync(`${pumlDirectory}/**/*.puml`, {ignore, nodir: true})
-    const pumlLinks = new PumlLinks(pumlPaths, shouldShortenLinks)
+    const pumlLinks = new PumlLinks({
+        pumlPaths, shouldShortenLinks, pumlServerUrl
+    })
 
     for (let p of pumlPaths) await processPumlFile(p, pumlLinks)
     for (let p of mdPaths) await processMdFile(p, pumlLinks)
 
     if (outputImages) {
         await saveDiagrams({
-            rootDirectory, distDirectory, imageFormats, pumlLinks
+            rootDirectory, distDirectory, imageFormats, pumlLinks, pumlServerUrl
         })
     }
 }
