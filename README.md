@@ -79,7 +79,9 @@ don't need to delete the rendered image or link.
 
 ### Advanced Usage
 Here are some other features supported
-- You can specify the CLI to output the diagram images as png and/or svg see `--output-images` and `--image-formats`
+- You can specify the CLI to output the diagram images as png and/or svg see `--output-images` and `--image-formats`.
+For an example of outputted images, checkout [dist_puml/puml](./dist_puml/puml). These images were created by the
+[pre-commit hook](./.husky/pre-commit).
 - You can specify the PUML server used to render the diagrams see `--puml-server-url`
 
 ### All CLI Options
