@@ -4,7 +4,7 @@
 Just run `puml-for-markdown` in any directory where you have markdown files and it will render links to PlantUML files
 in markdown comments. [PlantUML](https://plantuml.com) files allow you to create diagrams that are defined using a
 simple and intuitive language. By default the entire directory is recursively searched, automatically ignoring anything
-in the gitignore file. The best part about this is that it requires not build files, you don't even need to store 
+in the gitignore file. The best part about this is that it requires no build files, you don't even need to store 
 puml images in your repo.
 
 ## Examples
