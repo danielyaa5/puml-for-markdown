@@ -1,6 +1,6 @@
 {
   "name": "puml-for-markdown",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "An application to add interactive PUML diagrams to your github markdown files. If running with default arguments, run in project root directory.",
   "main": "index.js",
   "scripts": {

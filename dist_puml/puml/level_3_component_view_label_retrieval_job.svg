@@ -11,7 +11,7 @@ link extractTransform to loader--><g id="link_extractTransform_loader"><path d="
 link loader to performCalculations--><g id="link_loader_performCalculations"><path d="M956.157,318.3125 C1009.05,318.3125 1069.6,318.3125 1121.43,318.3125 " fill="none" id="loader-to-performCalculations" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1129.67,318.3125,1121.67,315.3125,1121.67,321.3125,1129.67,318.3125" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="108" x="987" y="301.4512">When all labels</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="69" x="1008.5" y="315.4199">retrieved</text></g><!--MD5=[1e8347178aca6c18090e2e94fdb7b430]
 reverse link sampleLabelsDb to loader--><g id="link_sampleLabelsDb_loader"><path d="M823,226.2125 C823,240.2215 823,254.6305 823,267.7685 " fill="none" id="sampleLabelsDb-backto-loader" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="823,218.0225,820,226.0225,826,226.0225,823,218.0225" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="810.5" y="247.4512"> </text></g><!--MD5=[08021a212cec5ab4789cba484e6dd5cf]
 link loader to someMicroService--><g id="link_loader_someMicroService"><path d="M823,368.9915 C823,382.4825 823,397.0565 823,410.5512 " fill="none" id="loader-to-someMicroService" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="823,418.795,826,410.795,820,410.795,823,418.795" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="810.5" y="398.4512"> </text></g><!--MD5=[3be8c533fe2768d60546335209ace99f]
-link performCalculations to calculatePrevalence--><g id="link_performCalculations_calculatePrevalence"><path d="M1359.12,318.3125 C1377.83,318.3125 1397.42,318.3125 1416.72,318.3125 " fill="none" id="performCalculations-to-calculatePrevalence" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1424.97,318.3125,1416.97,315.3125,1416.97,321.3125,1424.97,318.3125" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="1390" y="315.4512"> </text></g><rect height="34.9219" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="3" x="842" y="509"/><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="842" y="518.2822"> </text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="842" y="529.9229"> </text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="842" y="541.5635"> </text><!--MD5=[4c2b58bbfabf800f200b7370f27fb4f7]
+link performCalculations to calculatePrevalence--><g id="link_performCalculations_calculatePrevalence"><path d="M1359.12,318.3125 C1377.83,318.3125 1397.42,318.3125 1416.72,318.3125 " fill="none" id="performCalculations-to-calculatePrevalence" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1424.97,318.3125,1416.97,315.3125,1416.97,321.3125,1424.97,318.3125" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="1390" y="315.4512"> </text></g><rect height="34.9219" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="3" x="842" y="509"/><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="842" y="518.2822"> </text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="842" y="529.9229"> </text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="842" y="541.5635"> </text><!--MD5=[a7c140525e4720faa8f6b952e198cd09]
 @startuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 
@@ -1579,7 +1579,10 @@ sprite $firewall [48x43/16] {
 
 
 
+
 skinparam defaultTextAlignment center
+
+skinparam PackageTitleAlignment Left
 
 skinparam wrapWidth 200
 skinparam maxMessageSize 150
@@ -1602,19 +1605,21 @@ skinparam Arrow {
 
 
 
+
+
+
+
+
 sprite $RoboMaker [64x64/16z] {
-xPK5iYim24Kl4W9t__lzcipJoBFHdhgS88KfVue73wf7zEBdI1VyGpm_OTjVCNeF5y2I7wC1Jr7JWSOpFMQj1itdzQV2U481v0Zl94D7_K7I6my4MXVb9EMf
-VacUSHGDPDKe8JW86CzqM8EnwyWXoKdo1WUaXlyfgiRz91NG_CGf0u4xv6Es03x3ev4DUJtmHHgQeKy_oBZsrPs4iU2VyaEJLEaDGP8LXdzO5Az903hs3w9c
-AW2iyvQAJfRDi3CHgwle6YJP0Iy-enm8dd7N_thdArBGUAGy_-fIxtoa2DvGa5fCLdA7_o_UaCk3kI409DdXws_4BZmCGIgAAqIu9WLQh7NuqovLaWpqiKmw
-Hw1SFPyMSezXV1C2gT5tmGWinWCgend9GCok9Nn-kg7C33Q_E5lXA59qP6TckTiz-8WVvJE-Ls2-3I1tlozy3XkWJ_zBKiDdB7fOJV3aiyA3W_0eFldlxt90
-VFWhXg-GVC_FlFEp8Rxavtl-mnUxyviYzlEpzm4llaU_ybSscV0EwniCtR7TlpDhl-AAuZVnuC5l
+xPK5aiGm30H7O5cQ___tqAvRSfoZmkrbw8YY2l-B9q-gH_JYpqWNu1tn_85jxsBq7Yw09Rz70xwYfWEDUthCMWsQb_MNmhX30UG8xoH3H_r1qXit15eNvIJb
+gtv9xd4K3MJLA24u21ZtT5Y3iUl8eSX9yGmEQ0t_HrIDvqageFc3emm4xf3lsGhu38z6DYJFaLwaeHdwz8ECqxwwap0M_4T-Q98glNrEliA0TooAfqa0ElOF
+ecOg0AppB1MTB9jXPo9Mfw9ha6G7lCWloe7W7dVzr3jlI47Zbl9yrwKUdXZ1CzH3dIpPJD8_YpVayi0y881tiyFN_mYkSHY2L1HNY71D2RHOw_2xNQea6MDq
+wUerXwAUNmjvZ67y4mAfaPTW11RZ1fNHZ6GWPjSI_lNhaZ8psFpZR8MZID6HdPdbqUx1H_med_6z0lDh07aqN_WS1g1VroMfuJCMFQmc-F9PuS51U1I__CUx
+710V_ehXAoGV-Pdd_6o8N_dvo7_wOkVyfeZr-RFt0Iy-ef_oLpQPy0xh1nYwut3_zgpzYbCK_uWdJru1
 }
 
+
 skinparam rectangle<<RoboMaker>> {
-    BackgroundColor #FFFFFF
-    BorderColor #FF9900
-}
-skinparam participant<<RoboMaker>> {
     BackgroundColor #FFFFFF
     BorderColor #FF9900
 }
@@ -1834,7 +1839,7 @@ end footer
 hide stereotype
 @enduml
 
-PlantUML version 1.2022.3beta2(Unknown compile time)
+PlantUML version 1.2022.7beta2(Unknown compile time)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
 JVM: Java HotSpot(TM) 64-Bit Server VM
