@@ -148,6 +148,10 @@ though.
 ### Other Helpful Links
 * [C4-Puml](https://github.com/plantuml-stdlib/C4-PlantUML): A collection of PlantUML diagrams for use in C4, you'll see me using this in my examples
 
+### Known Issues
+* Seems to be breaking on Windows, see [here](https://github.com/danielyaa5/puml-for-markdown/issues/6). I don't have a
+Windows machine to test on so help here would be appreciated.
+
 ### More Examples
 [![ERD](https://tinyurl.com/ya6qvr7r)](https://tinyurl.com/ya6qvr7r)<!--![ERD](./puml/level_4_erd.puml)-->
 
