@@ -15,15 +15,28 @@ const glob = require('glob')
 const plantUmlEncoder = require('plantuml-encoder')
 const tiny = require('tinyurl');
 const parseGitIgnore = require('gitignore-globs');
-
+const axios = require('axios')
 
 // HELPERS
 
+const polrShorten = (polrUrl, urlToShorten) => {
+    const polrApikey = process.env.POLR_APIKEY ? process.env.POLR_APIKEY : ''
+    return axios.get(polrUrl+'/api/v2/action/shorten?apikey='+polrApikey+'&url='+urlToShorten)
+      .then(res => res.data)
+      .catch(err => {
+        console.error('Error calling polr shorten API: ', err.message);
+        return err
+      });
+}
+
 const getBuffer = bent('buffer')
 const mkdirIfDoesntExist = (p) => !fs.existsSync(p) && fs.mkdirSync(p, {recursive: true})
-const getPumlUrl = ({imgFormat, encodedData, shorten, pumlServerUrl}) => shorten ?
-    tiny.shorten(getFullPumlUrl({imgFormat, encodedData, pumlServerUrl})) :
-    getFullPumlUrl({imgFormat, encodedData, pumlServerUrl})
+const getPumlUrl = ({imgFormat, encodedData, shorten, pumlServerUrl, polrUrl}) => {
+    const fullPumlUrl = getFullPumlUrl({imgFormat, encodedData, pumlServerUrl})
+    if (!shorten) return fullPumlUrl
+    if (polrUrl) return polrShorten(polrUrl, fullPumlUrl)
+    return tiny.shorten(fullPumlUrl)
+}
 const getFullPumlUrl = ({imgFormat, encodedData, pumlServerUrl}) => `${pumlServerUrl}/${imgFormat}/${encodedData}}`
 const mapUniqMatches = (s, re, mapper, match = re.exec(s), results = []) => {
     if (match) return mapUniqMatches(s, re, mapper, re.exec(s), results.concat([match]))
@@ -55,10 +68,11 @@ const replaceMdIgnoringCode = (mdString, replaceFn) => {
 // DATA STRUCTURES
 
 class PumlLinks extends Map {
-    constructor({ pumlPaths, shouldShortenLinks, pumlServerUrl }) {
+    constructor({ pumlPaths, shouldShortenLinks, pumlServerUrl, polrUrl }) {
         super();
         this.shouldShortenLinks = shouldShortenLinks
         this.pumlServerUrl = pumlServerUrl
+        this.polrUrl = polrUrl
         // We need to know which paths should be visited
         // Any path that's not marked 0 we know isn't a puml path because it doesn't correspond to a puml file
         pumlPaths.forEach(p => this.set(p, 0))
@@ -73,7 +87,7 @@ class PumlLinks extends Map {
 
         const encodedData = plantUmlEncoder.encode(v)
         const url = await getPumlUrl({
-            imgFormat: 'svg', encodedData, shorten: this.shouldShortenLinks, pumlServerUrl: this.pumlServerUrl
+            imgFormat: 'svg', encodedData, shorten: this.shouldShortenLinks, pumlServerUrl: this.pumlServerUrl, polrUrl: this.polrUrl
         })
         return super.set(pumlPath, {encodedData, url, data: v});
     }
@@ -200,6 +214,7 @@ const runOnce = async (
         respectGitignore,
         gitignorePath,
         shouldShortenLinks,
+        polrUrl
     }
 ) => {
     assert(fs.existsSync(markdownDirectory), "That's an invalid md folder path")
@@ -209,7 +224,7 @@ const runOnce = async (
     const mdPaths = glob.sync(`${markdownDirectory}/**/*.md`, {ignore, nodir: true})
     const pumlPaths = glob.sync(`${pumlDirectory}/**/*.puml`, {ignore, nodir: true})
     const pumlLinks = new PumlLinks({
-        pumlPaths, shouldShortenLinks, pumlServerUrl
+        pumlPaths, shouldShortenLinks, pumlServerUrl, polrUrl
     })
 
     for (let p of pumlPaths) await processPumlFile(p, pumlLinks)

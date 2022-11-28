@@ -70,6 +70,11 @@ new Command()
     '-t, --turn-off-link-shortening',
     "Use the full puml server link instead of the tiny url, if your diagrams are too big this won't work",
   )
+  .addOption(new Option(
+      '-l, --polr-url <url>',
+      "Use polr shortener instead tinyurl - optionally specify polr api key in POLR_APIKEY env var",
+    )
+  )
   .action(opts => {
       const useDefaultGitignorePath = !opts.gitignorePath
 
@@ -80,6 +85,11 @@ new Command()
       opts.shouldShortenLinks = !opts.turnOffLinkShortening
       opts.respectGitignore = !opts.ignoreGitignore
       opts.imageFormats = opts.imageFormats === 'both' ? ['png', 'svg'] : [opts.imageFormats]
+
+      if (opts.shouldShortenLinks == false && opts.polrUrl != null) {
+        console.error("Specifying polr shortener url but disabling shortening not allowed - please specify only one of these two options")
+        return
+      }
 
       // If a gitignore path wasn't specified, don't try and parse it
       if (useDefaultGitignorePath && !fs.existsSync(opts.gitignorePath)) {
