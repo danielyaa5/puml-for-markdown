@@ -20,14 +20,12 @@ const axios = require('axios')
 // HELPERS
 
 const polrShorten = (polrUrl, urlToShorten) => {
-    const polrApikey = process.env.POLR_APIKEY
+    const polrApikey = process.env.POLR_APIKEY ? process.env.POLR_APIKEY : ''
     return axios.get(polrUrl+'/api/v2/action/shorten?apikey='+polrApikey+'&url='+urlToShorten)
-      .then(res => {
-        return res.data
-      })
+      .then(res => res.data)
       .catch(err => {
-        console.log('Error calling polr shorten API: ', err.message);
-        return ''
+        console.error('Error calling polr shorten API: ', err.message);
+        return err
       });
 }
 

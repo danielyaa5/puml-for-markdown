@@ -86,6 +86,11 @@ new Command()
       opts.respectGitignore = !opts.ignoreGitignore
       opts.imageFormats = opts.imageFormats === 'both' ? ['png', 'svg'] : [opts.imageFormats]
 
+      if (opts.shouldShortenLinks == false && opts.polrUrl != null) {
+        console.error("Specifying polr shortener url but disabling shortening not allowed - please specify only one of these two options")
+        return
+      }
+
       // If a gitignore path wasn't specified, don't try and parse it
       if (useDefaultGitignorePath && !fs.existsSync(opts.gitignorePath)) {
           opts.respectGitignore = false

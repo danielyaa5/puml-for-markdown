@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="757px" preserveAspectRatio="none" style="width:626px;height:757px;background:#FFFFFF;" version="1.1" viewBox="0 0 626 757" width="626px" zoomAndPan="magnify"><defs><filter height="300%" id="f1r9xauw59sm7o" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="186" y="9.2822"> </text><text fill="#000000" font-family="sans-serif" font-size="22" lengthAdjust="spacing" textLength="351" x="24" y="32.0615">My Project Name - System View</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="186" y="46.5322"> </text><text fill="#484848" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="309" x="45" y="61.8857">The goals of my project are described here</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="186" y="74.4697"> </text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="186" y="86.1104"> </text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="186" y="97.751"> </text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="186" y="109.3916"> </text><!--MD5=[64e6c5c5fcd06e6a4a6ae504c9094554]
-cluster labelers--><g id="cluster_labelers"><rect fill="none" height="222" rx="2.5" ry="2.5" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="327" x="113.5" y="313.75"/><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="183.5" y="330.6016"> </text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="77" x="148" y="349.2266">Labelers</text><text fill="#444444" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="140" x="116.5" y="364.1387">[Human Resources]</text></g><!--MD5=[02fc2b6613520cb5be8c4da6beee2751]
-entity labelerB--><g id="elem_labelerB"><rect fill="#E0F1FB" height="135.5156" rx="12.5" ry="12.5" style="stroke:#073B6F;stroke-width:0.5;" width="130" x="294.5" y="383.75"/><image height="48" width="48" x="335.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACDklEQVR4Xu2YoU4EMRCG7w0IL0ACHkGwGIJEkaBwCAQSQ7AY0BjQCBIsCQZJUEiQqEWj0Bi+0ITczbTdmfbK7SX8+QXZbDsf05m2e6Pu82tQHulHs3UV0M3dw97+wcbm1uraOt7e2T05PXt6edNv2l0IdH5xtbC4OEoIxPvHZz3KYjfQ6/sHyZAIMZEtPbzXPiBoMonROjw61pPk7QMy5mZcLK6eJ2MHEEsgo9lEXvVsKVuBmFTGMYtO1BOmbAUi8zKOR3rClK2v0skyiEfsWHrOqK1ArubSsm8BViAZwSl7/88t0NLyigzikX03sgJxcMogHk2/qGvanobQE6ZsBeoqGs1eQJ0LaFhHR3DB9nh5favnydgHxP/qajf7fvhrH1CwMU/e3ASXAGGCZVLFHuGqm3EXAgVzcWZRCE/OMNcMdodilOAqoBaeWyC+tqgbFohdDvd+5fByeJNF5Nywr2M/EBDR+uVhKBriwYf5g5dTPchzy4mWA2J88XGRElj5bCWBig+KXpHazOd2HKjmbLeIxKfyFAGiGuQEDcTa6dBxoFRVTl3Rs0UC/U16giimfiA6WY5rKV3dEii65bSTvvxLIDmisfTtdgKo5heFMnFTGBaQbv5/oEkNDqinhrqKr8Ey6c8SCdT6WB1X9IiVQJi9QQ5tIHbg6LUzAtT9FBO3Mw6/Ro6i5IBm6MEBfQPBjjaf88lxswAAAABJRU5ErkJggg==" y="393.75"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="95" x="312" y="456.6016">Labelers B</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="357.5" y="473.3701"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="308.5" y="489.667">Labeler Type 2</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="357.5" y="505.9639"> </text></g><!--MD5=[7669504d746bbb6689b538a401700840]
-entity labelerA--><g id="elem_labelerA"><rect fill="#E0F1FB" height="135.5156" rx="12.5" ry="12.5" style="stroke:#073B6F;stroke-width:0.5;" width="130" x="129.5" y="383.75"/><image height="48" width="48" x="170.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACDklEQVR4Xu2YoU4EMRCG7w0IL0ACHkGwGIJEkaBwCAQSQ7AY0BjQCBIsCQZJUEiQqEWj0Bi+0ITczbTdmfbK7SX8+QXZbDsf05m2e6Pu82tQHulHs3UV0M3dw97+wcbm1uraOt7e2T05PXt6edNv2l0IdH5xtbC4OEoIxPvHZz3KYjfQ6/sHyZAIMZEtPbzXPiBoMonROjw61pPk7QMy5mZcLK6eJ2MHEEsgo9lEXvVsKVuBmFTGMYtO1BOmbAUi8zKOR3rClK2v0skyiEfsWHrOqK1ArubSsm8BViAZwSl7/88t0NLyigzikX03sgJxcMogHk2/qGvanobQE6ZsBeoqGs1eQJ0LaFhHR3DB9nh5favnydgHxP/qajf7fvhrH1CwMU/e3ASXAGGCZVLFHuGqm3EXAgVzcWZRCE/OMNcMdodilOAqoBaeWyC+tqgbFohdDvd+5fByeJNF5Nywr2M/EBDR+uVhKBriwYf5g5dTPchzy4mWA2J88XGRElj5bCWBig+KXpHazOd2HKjmbLeIxKfyFAGiGuQEDcTa6dBxoFRVTl3Rs0UC/U16giimfiA6WY5rKV3dEii65bSTvvxLIDmisfTtdgKo5heFMnFTGBaQbv5/oEkNDqinhrqKr8Ey6c8SCdT6WB1X9IiVQJi9QQ5tIHbg6LUzAtT9FBO3Mw6/Ro6i5IBm6MEBfQPBjjaf88lxswAAAABJRU5ErkJggg==" y="393.75"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="95" x="147" y="456.6016">Labelers A</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="192.5" y="473.3701"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="143.5" y="489.667">Labeler Type 2</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="192.5" y="505.9639"> </text></g><!--MD5=[c2bc3338f3606f07cbf0204f003df5d6]
-entity sysName--><g id="elem_sysName"><a href="https://tinyurl.com/yblre3m4" target="_top" title="https://tinyurl.com/yblre3m4" xlink:actuate="onRequest" xlink:href="https://tinyurl.com/yblre3m4" xlink:show="new" xlink:title="https://tinyurl.com/yblre3m4" xlink:type="simple"><rect fill="#FFDB58" height="102.9219" rx="2.5" ry="2.5" style="stroke:#808080;stroke-width:0.5;" width="169" x="447" y="626.75"/><image height="48" width="48" x="507.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAABv0lEQVR4Xu2YsUoEMRCGt7ISRCurK8RKBAuxukoQxMJKhHsCfQLxBSys7a60tbIXfAJ9AvEVfIX1x12yZibZSW4nyRX5+TmOJcl8m0wmuWvar8VaueGPyroCSa5AkiuQ5FWAfj6vPl7P355P8YnvvMEURwAh9v3twd5ss7GFJ3iuRRYKhJCEg2v5cMI7xjoI6Gy+S4N7dH0x492jLAOF03SayCQAhawUF9YO+Q6yLuG2tzZuFvvf75d8fO4xIOQpDTVNj3dHPArxGBBeiw45WSLTGBCmmo6nofG18wKhGx1JSchLHs7YC4RCTEdS0vHhDg9n7AV6eZrTkZSErcfDGbuBkHqJEqiJnSGkDj+tdIXNyzncQKhmtHca4Z19+38AQhlMt0xOAYuXgAEoRRkUhSkgTD2Q+ikRLrLpeiCsKG2YUf/zqQfCyUxbZRQWjgKhNtBWeWUyaV2AcFJZQLHXQnXhpLKAVrsZKgo12QLKVqN96jAGoLZoGiFhHEAFJ8mslwXUFiqP5AJJrx+ZmfiPOArU/l1eU1+JOjlvIA4gg4XzH5mOuq5ovCpSGL8kfX9OeIFKuQJJrkCSK5DkCiT5F3BCUaxaxrStAAAAAElFTkSuQmCC" y="636.75"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="149" x="457" y="699.6016">Labeling System</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="529.5" y="716.3701"> </text></a></g><!--MD5=[fc2dbb65291f389618fd364540548050]
-entity videoSamples--><g id="elem_videoSamples"><rect fill="#FFFFFF" filter="url(#f1r9xauw59sm7o)" height="119.2188" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="231" x="79" y="119.75"/><image height="48" width="48" x="170.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAABwElEQVR4Xu2XUZGEMBBEsYCFtYAFLKyFs3AWzgIWsIAFLGABC1wXqYVOwxIGCHtXlfcJk/BIZiaQDX+MTC98miQUIgmFSEIh/ptQ13Vt2zZNU9d1VVU/I9/E1wK+i2CMqkcwCabq+16f4bMihGHP5zPP8ywaRVHAVR88okJ4IR0djcfjsVwwTwhro4MiU5YlCwwihNs6Ij5YBXbwhDT2FiSZZiEUlMbeAgqIfEgIZamxt4DUJh8SstbXVX0B85APCaGPaewm6IFYVHQUvWGHfEgID9DATRDvBqILn1wt7kazEJJLAzeZhBzWBWZQT9M8lwkBvKh1EkcsIQcanTWxuDfOQtY2/U7IYarZ6ELYAtNs60KXbBnSyFqtWTwh0zYx60ltfTMWQivCCaARu1kXsjYSJ3SgppZMDgML4TNAAzfBFlsX9R3kc+JwvYq3h+unPj+w4+RDQqhYjb0FqVZv/04e2sdAqrCDJ2QttEuQPyFPCPfOtJMDLH8XPaFhdDrfV3Yim+VQIQfaHdyRbjgj4YdlO5Ne+QgmwVToXkgMdHZ95It1oQ36Fx3RjvAVF6ODd2AWik0SCpGEQiShEEkoxC9iq7hzzC8LOwAAAABJRU5ErkJggg==" y="129.75"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="61" x="164" y="192.6016">Videos</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="192.5" y="209.3701"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="207" x="93" y="225.667">Users and internal customers</text></g><!--MD5=[a4840ebcbdfa8fab7f32db51646079de]
-entity modelTrainingInference--><g id="elem_modelTrainingInference"><rect fill="#FFFFFF" filter="url(#f1r9xauw59sm7o)" height="135.2188" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="267" x="7" y="610.75"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="247" x="17" y="635.6016">Model Training + Inference</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="138.5" y="652.3701"> </text><image height="64" width="64" x="108.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAADeElEQVR4Xu2ZPYvcMBCG7/83adKlSJciXSBlIGUgbUib1Ik5lmNzHMexOC9+2EHRyPqwlfUuWLwcXlmW5pkZfdh3N7x6fdO681W3pR1ga+0AW2sH2Fo7wIzu37x9+PDx+OmzpAv99G26qDPA4d37p2/fT38eR1dUqVtq4J9ao24Asuz5x8/QVnxPHEIqNeuI0Qfg8ctXjMv7mPjQUo/4BgtUBYAX5/IYx7/8+h2anpkDulZjQuF7a1UZgMEoSe/Kl/Kr/ZTF4SNWlEK6Zc30SJcgFAA05DiFW16UBbLMtzEJj0TPzAH9TXphsQoApCwJQKpQrxqfUTQI3RwJd3TJHFMBQP5jSKYpY6tSoUhGw1O1NmhVAWA4B2GcpinDZwAurzLAkEoYXxNJiW5TOVqg+qoKwKsIwJRV9Aigfvo2XdQMYKs49vkGw+T+MdiqmD//KQhlALZP8zdLjWziQvMh+cgYLEcsPpsByN9kAj/H81okpLkgXBcAO6sNr2sltBxPYkSrvqhUY6e6sKjyOH8eWawyQCS8SwlX0kNwGh2nWau7qpFgtluqSSbeMjUDDGc3mxH6aaZn3BwFRxfJZq1qAGBpj3KGrXqcJkOlQWpmm2Pm3FGpBgCmcpg2Zv2ClLCT38ozaQMAnrPZjPUyotLxXralrIlDA0Ao1tA11iM9ThwWL7JlANImchJzcfGoocwX/laNCgDsQZQoeZJb2DIxyrJEKgCwXOBvG4DEXZk8kRSBZUEoAFiOvpxfBoh4R/ejxQe+AsAwWRz2S7j9usmZj4NTMjgsYjTwhrLBL1hSywCRSKeo0s4X9uYeMVgk7UzhGXTruf11uRmAg01UyVTBpuSMDCuh9UmY7LmoKoD76bSDxtRnhXDs5CSB0MJySn2hsc6RD1FSVQCWIRTvPOzjGGfXYQMiwPSw62QnVnoChAmQHNtSnOK9O/z7hc9PkuEMMARf03wnXjkAjaFezLIMAI2P0xe4zH5kDbz1gwMY647cOQA6Ok3fCYsA6xUBELFT6VNkGUDPMwcuDKBBk2+tka4aIBx3TjtAP+0ATsmObg+AM9blAbQE1bwx5wCaNrL1igAoTzOHc1MOwMQ75IUBiqajKgByUT3af5wepv/e9RWJqgtIDtkN2NQAcOHSE4CD2oVVkz9DJcA1awfYWjvA1toBttYOsLX+AqfimpC5/JuHAAAAAElFTkSuQmCC" y="655.6719"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="138.5" y="732.667"> </text></g><!--MD5=[10de388a5163c5b7f390577349acaeb4]
-reverse link labelerB to sysName--><g id="link_labelerB_sysName"><path d="M344.378,528.337 C344.245,546.504 347.286,565.148 356.5,580.75 C376.347,614.359 412.546,637.065 446.893,651.9599 " fill="none" id="labelerB-backto-sysName" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="344.652,520.036,341.3894,527.9325,347.3861,528.1307,344.652,520.036" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="118" x="365.5" y="563.8887">Trigger samples</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="84" x="380.5" y="577.8574">for labeling</text></g><!--MD5=[8d5591b65ca27bc14c95d76ef742e60a]
-link labelerB to sysName--><g id="link_labelerB_sysName"><path d="M424.816,489.238 C449.035,505.595 474.868,526.848 492.5,551.75 C506.476,571.489 515.564,596.398 521.417,618.813 " fill="none" id="labelerB-to-sysName" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="523.355,626.624,524.3395,618.1369,518.5162,619.5823,523.355,626.624" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="102" x="512.5" y="563.8887">Store labeling</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="52" x="521.5" y="577.8574">results</text></g><!--MD5=[756e991de16c32398e85029ed8d3e7fb]
-link videoSamples to labelerA--><g id="link_videoSamples_labelerA"><path d="M194.5,238.944 C194.5,278.942 194.5,332.258 194.5,375.391 " fill="none" id="videoSamples-to-labelerA" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="194.5,383.597,197.5,375.597,191.5,375.597,194.5,383.597" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="119" x="199.5" y="280.8887">Send samples to</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="59" x="229.5" y="294.8574">labelers</text></g><!--MD5=[cd714562d42bd0956c015891f7de0a31]
-link labelerA to modelTrainingInference--><g id="link_labelerA_modelTrainingInference"><path d="M178.371,519.803 C172.092,545.91 164.871,575.931 158.429,602.713 " fill="none" id="labelerA-to-modelTrainingInference" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="156.546,610.542,161.3341,603.4657,155.5005,602.0622,156.546,610.542" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="83" x="174.5" y="570.8887">Send labels</text></g><!--MD5=[b8bfa81b111109bcd0af165d9b60a526]
-link modelTrainingInference to sysName--><g id="link_modelTrainingInference_sysName"><path d="M274.24,678.25 C328.392,678.25 389.59,678.25 438.708,678.25 " fill="none" id="modelTrainingInference-to-sysName" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="446.796,678.25,438.796,675.25,438.796,681.25,446.796,678.25" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="136" x="292.5" y="672.3887">Send model scores</text></g><!--MD5=[ef375b138b8e95f3d1abcb41730fb2e1]
-reverse link modelTrainingInference to sysName--><g id="link_modelTrainingInference_sysName"><path d="M282.335,695.1446 C321.435,697.8492 363.86,698.978 403,696.25 C417.158,695.2632 432.129,693.672 446.657,691.8336 " fill="none" id="modelTrainingInference-backto-sysName" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="274.044,694.5444,281.8061,698.1151,282.24,692.1308,274.044,694.5444" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="83" x="319" y="693.3887">Send labels</text></g><!--MD5=[6f050157cc2b3393d12699e945cb5268]
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="764px" preserveAspectRatio="none" style="width:622px;height:764px;background:#FFFFFF;" version="1.1" viewBox="0 0 622 764" width="622px" zoomAndPan="magnify"><defs><filter height="300%" id="f17yen3s41djsz" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="186" y="9.2822"> </text><text fill="#000000" font-family="sans-serif" font-size="22" lengthAdjust="spacing" textLength="351" x="24" y="32.0615">My Project Name - System View</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="186" y="46.5322"> </text><text fill="#484848" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="309" x="45" y="61.8857">The goals of my project are described here</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="186" y="74.4697"> </text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="186" y="86.1104"> </text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="186" y="97.751"> </text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="186" y="109.3916"> </text><!--MD5=[64e6c5c5fcd06e6a4a6ae504c9094554]
+cluster labelers--><g id="cluster_labelers"><rect fill="none" height="224" rx="2.5" ry="2.5" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="327" x="117.5" y="313.75"/><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="187.5" y="330.6016"> </text><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="89" x="146" y="351.083">Labelers</text><text fill="#444444" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="140" x="120.5" y="366.4668">[Human Resources]</text></g><!--MD5=[02fc2b6613520cb5be8c4da6beee2751]
+entity labelerB--><g id="elem_labelerB"><rect fill="#E0F1FB" height="135.5156" rx="12.5" ry="12.5" style="stroke:#073B6F;stroke-width:0.5;" width="130" x="298.5" y="385.75"/><image height="48" width="48" x="339.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACDklEQVR4Xu2YoU4EMRCG7w0IL0ACHkGwGIJEkaBwCAQSQ7AY0BjQCBIsCQZJUEiQqEWj0Bi+0ITczbTdmfbK7SX8+QXZbDsf05m2e6Pu82tQHulHs3UV0M3dw97+wcbm1uraOt7e2T05PXt6edNv2l0IdH5xtbC4OEoIxPvHZz3KYjfQ6/sHyZAIMZEtPbzXPiBoMonROjw61pPk7QMy5mZcLK6eJ2MHEEsgo9lEXvVsKVuBmFTGMYtO1BOmbAUi8zKOR3rClK2v0skyiEfsWHrOqK1ArubSsm8BViAZwSl7/88t0NLyigzikX03sgJxcMogHk2/qGvanobQE6ZsBeoqGs1eQJ0LaFhHR3DB9nh5favnydgHxP/qajf7fvhrH1CwMU/e3ASXAGGCZVLFHuGqm3EXAgVzcWZRCE/OMNcMdodilOAqoBaeWyC+tqgbFohdDvd+5fByeJNF5Nywr2M/EBDR+uVhKBriwYf5g5dTPchzy4mWA2J88XGRElj5bCWBig+KXpHazOd2HKjmbLeIxKfyFAGiGuQEDcTa6dBxoFRVTl3Rs0UC/U16giimfiA6WY5rKV3dEii65bSTvvxLIDmisfTtdgKo5heFMnFTGBaQbv5/oEkNDqinhrqKr8Ey6c8SCdT6WB1X9IiVQJi9QQ5tIHbg6LUzAtT9FBO3Mw6/Ro6i5IBm6MEBfQPBjjaf88lxswAAAABJRU5ErkJggg==" y="395.75"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="77" x="316" y="458.6016">Labelers</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="393" y="458.6016"> </text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="12" x="399" y="458.6016">B</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="361.5" y="475.3701"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="308.5" y="491.667"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="312.5" y="491.667">Labeler</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="366.5" y="491.667"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="370.5" y="491.667">Type</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="406.5" y="491.667"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="410.5" y="491.667">2</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="361.5" y="507.9639"> </text></g><!--MD5=[7669504d746bbb6689b538a401700840]
+entity labelerA--><g id="elem_labelerA"><rect fill="#E0F1FB" height="135.5156" rx="12.5" ry="12.5" style="stroke:#073B6F;stroke-width:0.5;" width="130" x="133.5" y="385.75"/><image height="48" width="48" x="174.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACDklEQVR4Xu2YoU4EMRCG7w0IL0ACHkGwGIJEkaBwCAQSQ7AY0BjQCBIsCQZJUEiQqEWj0Bi+0ITczbTdmfbK7SX8+QXZbDsf05m2e6Pu82tQHulHs3UV0M3dw97+wcbm1uraOt7e2T05PXt6edNv2l0IdH5xtbC4OEoIxPvHZz3KYjfQ6/sHyZAIMZEtPbzXPiBoMonROjw61pPk7QMy5mZcLK6eJ2MHEEsgo9lEXvVsKVuBmFTGMYtO1BOmbAUi8zKOR3rClK2v0skyiEfsWHrOqK1ArubSsm8BViAZwSl7/88t0NLyigzikX03sgJxcMogHk2/qGvanobQE6ZsBeoqGs1eQJ0LaFhHR3DB9nh5favnydgHxP/qajf7fvhrH1CwMU/e3ASXAGGCZVLFHuGqm3EXAgVzcWZRCE/OMNcMdodilOAqoBaeWyC+tqgbFohdDvd+5fByeJNF5Nywr2M/EBDR+uVhKBriwYf5g5dTPchzy4mWA2J88XGRElj5bCWBig+KXpHazOd2HKjmbLeIxKfyFAGiGuQEDcTa6dBxoFRVTl3Rs0UC/U16giimfiA6WY5rKV3dEii65bSTvvxLIDmisfTtdgKo5heFMnFTGBaQbv5/oEkNDqinhrqKr8Ey6c8SCdT6WB1X9IiVQJi9QQ5tIHbg6LUzAtT9FBO3Mw6/Ro6i5IBm6MEBfQPBjjaf88lxswAAAABJRU5ErkJggg==" y="395.75"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="77" x="151" y="458.6016">Labelers</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="228" y="458.6016"> </text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="12" x="234" y="458.6016">A</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="196.5" y="475.3701"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="143.5" y="491.667"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="147.5" y="491.667">Labeler</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="201.5" y="491.667"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="205.5" y="491.667">Type</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="241.5" y="491.667"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="245.5" y="491.667">2</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="196.5" y="507.9639"> </text></g><!--MD5=[c2bc3338f3606f07cbf0204f003df5d6]
+entity sysName--><g id="elem_sysName"><a href="https://tinyurl.com/yblre3m4" target="_top" title="https://tinyurl.com/yblre3m4" xlink:actuate="onRequest" xlink:href="https://tinyurl.com/yblre3m4" xlink:show="new" xlink:title="https://tinyurl.com/yblre3m4" xlink:type="simple"><rect fill="#FFDB58" height="105.25" rx="2.5" ry="2.5" style="stroke:#808080;stroke-width:0.5;" width="169" x="447" y="630.25"/><image height="48" width="48" x="507.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAABv0lEQVR4Xu2YsUoEMRCGt7ISRCurK8RKBAuxukoQxMJKhHsCfQLxBSys7a60tbIXfAJ9AvEVfIX1x12yZibZSW4nyRX5+TmOJcl8m0wmuWvar8VaueGPyroCSa5AkiuQ5FWAfj6vPl7P355P8YnvvMEURwAh9v3twd5ss7GFJ3iuRRYKhJCEg2v5cMI7xjoI6Gy+S4N7dH0x492jLAOF03SayCQAhawUF9YO+Q6yLuG2tzZuFvvf75d8fO4xIOQpDTVNj3dHPArxGBBeiw45WSLTGBCmmo6nofG18wKhGx1JSchLHs7YC4RCTEdS0vHhDg9n7AV6eZrTkZSErcfDGbuBkHqJEqiJnSGkDj+tdIXNyzncQKhmtHca4Z19+38AQhlMt0xOAYuXgAEoRRkUhSkgTD2Q+ikRLrLpeiCsKG2YUf/zqQfCyUxbZRQWjgKhNtBWeWUyaV2AcFJZQLHXQnXhpLKAVrsZKgo12QLKVqN96jAGoLZoGiFhHEAFJ8mslwXUFiqP5AJJrx+ZmfiPOArU/l1eU1+JOjlvIA4gg4XzH5mOuq5ovCpSGL8kfX9OeIFKuQJJrkCSK5DkCiT5F3BCUaxaxrStAAAAAElFTkSuQmCC" y="640.25"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="75" x="457" y="703.1016">Labeling</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="532" y="703.1016"> </text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="68" x="538" y="703.1016">System</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="528.5" y="721.7266"> </text></a></g><!--MD5=[fc2dbb65291f389618fd364540548050]
+entity videoSamples--><g id="elem_videoSamples"><rect fill="#FFFFFF" filter="url(#f17yen3s41djsz)" height="119.2188" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="231" x="83" y="119.75"/><image height="48" width="48" x="174.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAABwElEQVR4Xu2XUZGEMBBEsYCFtYAFLKyFs3AWzgIWsIAFLGABC1wXqYVOwxIGCHtXlfcJk/BIZiaQDX+MTC98miQUIgmFSEIh/ptQ13Vt2zZNU9d1VVU/I9/E1wK+i2CMqkcwCabq+16f4bMihGHP5zPP8ywaRVHAVR88okJ4IR0djcfjsVwwTwhro4MiU5YlCwwihNs6Ij5YBXbwhDT2FiSZZiEUlMbeAgqIfEgIZamxt4DUJh8SstbXVX0B85APCaGPaewm6IFYVHQUvWGHfEgID9DATRDvBqILn1wt7kazEJJLAzeZhBzWBWZQT9M8lwkBvKh1EkcsIQcanTWxuDfOQtY2/U7IYarZ6ELYAtNs60KXbBnSyFqtWTwh0zYx60ltfTMWQivCCaARu1kXsjYSJ3SgppZMDgML4TNAAzfBFlsX9R3kc+JwvYq3h+unPj+w4+RDQqhYjb0FqVZv/04e2sdAqrCDJ2QttEuQPyFPCPfOtJMDLH8XPaFhdDrfV3Yim+VQIQfaHdyRbjgj4YdlO5Ne+QgmwVToXkgMdHZ95It1oQ36Fx3RjvAVF6ODd2AWik0SCpGEQiShEEkoxC9iq7hzzC8LOwAAAABJRU5ErkJggg==" y="129.75"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="61" x="168" y="192.6016">Videos</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="196.5" y="209.3701"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="93" y="225.667"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="97" y="225.667">Users</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="135" y="225.667"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="139" y="225.667">and</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="165" y="225.667"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="169" y="225.667">internal</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="225" y="225.667"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="229" y="225.667">customers</text></g><!--MD5=[a4840ebcbdfa8fab7f32db51646079de]
+entity modelTrainingInference--><g id="elem_modelTrainingInference"><rect fill="#FFFFFF" filter="url(#f17yen3s41djsz)" height="139.875" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="267" x="7" y="612.75"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="54" x="17" y="637.6016">Model</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="71" y="637.6016"> </text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="75" x="77" y="637.6016">Training</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="152" y="637.6016"> </text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="14" x="158" y="637.6016">+</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="172" y="637.6016"> </text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="86" x="178" y="637.6016">Inference</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="137.5" y="656.2266"> </text><image height="64" width="64" x="108.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAADeElEQVR4Xu2ZPYvcMBCG7/83adKlSJciXSBlIGUgbUib1Ik5lmNzHMexOC9+2EHRyPqwlfUuWLwcXlmW5pkZfdh3N7x6fdO681W3pR1ga+0AW2sH2Fo7wIzu37x9+PDx+OmzpAv99G26qDPA4d37p2/fT38eR1dUqVtq4J9ao24Asuz5x8/QVnxPHEIqNeuI0Qfg8ctXjMv7mPjQUo/4BgtUBYAX5/IYx7/8+h2anpkDulZjQuF7a1UZgMEoSe/Kl/Kr/ZTF4SNWlEK6Zc30SJcgFAA05DiFW16UBbLMtzEJj0TPzAH9TXphsQoApCwJQKpQrxqfUTQI3RwJd3TJHFMBQP5jSKYpY6tSoUhGw1O1NmhVAWA4B2GcpinDZwAurzLAkEoYXxNJiW5TOVqg+qoKwKsIwJRV9Aigfvo2XdQMYKs49vkGw+T+MdiqmD//KQhlALZP8zdLjWziQvMh+cgYLEcsPpsByN9kAj/H81okpLkgXBcAO6sNr2sltBxPYkSrvqhUY6e6sKjyOH8eWawyQCS8SwlX0kNwGh2nWau7qpFgtluqSSbeMjUDDGc3mxH6aaZn3BwFRxfJZq1qAGBpj3KGrXqcJkOlQWpmm2Pm3FGpBgCmcpg2Zv2ClLCT38ozaQMAnrPZjPUyotLxXralrIlDA0Ao1tA11iM9ThwWL7JlANImchJzcfGoocwX/laNCgDsQZQoeZJb2DIxyrJEKgCwXOBvG4DEXZk8kRSBZUEoAFiOvpxfBoh4R/ejxQe+AsAwWRz2S7j9usmZj4NTMjgsYjTwhrLBL1hSywCRSKeo0s4X9uYeMVgk7UzhGXTruf11uRmAg01UyVTBpuSMDCuh9UmY7LmoKoD76bSDxtRnhXDs5CSB0MJySn2hsc6RD1FSVQCWIRTvPOzjGGfXYQMiwPSw62QnVnoChAmQHNtSnOK9O/z7hc9PkuEMMARf03wnXjkAjaFezLIMAI2P0xe4zH5kDbz1gwMY647cOQA6Ok3fCYsA6xUBELFT6VNkGUDPMwcuDKBBk2+tka4aIBx3TjtAP+0ATsmObg+AM9blAbQE1bwx5wCaNrL1igAoTzOHc1MOwMQ75IUBiqajKgByUT3af5wepv/e9RWJqgtIDtkN2NQAcOHSE4CD2oVVkz9DJcA1awfYWjvA1toBttYOsLX+AqfimpC5/JuHAAAAAElFTkSuQmCC" y="660"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="137.5" y="738.8516"> </text></g><!--MD5=[10de388a5163c5b7f390577349acaeb4]
+reverse link labelerB to sysName--><g id="link_labelerB_sysName"><path d="M348.606,530.204 C348.467,548.374 351.45,567.053 360.5,582.75 C379.433,615.589 413.881,638.523 446.923,653.9858 " fill="none" id="labelerB-backto-sysName" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="348.878,521.904,345.6168,529.8011,351.6135,529.9983,348.878,521.904" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="8" x="361.5" y="565.8887">  </text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="55" x="369.5" y="565.8887">Trigger</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="424.5" y="565.8887"> </text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="59" x="428.5" y="565.8887">samples</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="23" x="382.5" y="579.8574">for</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="405.5" y="579.8574"> </text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="57" x="409.5" y="579.8574">labeling</text></g><!--MD5=[8d5591b65ca27bc14c95d76ef742e60a]
+link labelerB to sysName--><g id="link_labelerB_sysName"><path d="M428.575,492.721 C451.586,508.955 475.858,529.734 492.5,553.75 C506.526,573.99 515.623,599.415 521.468,622.26 " fill="none" id="labelerB-to-sysName" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="523.403,630.221,524.4294,621.7389,518.599,623.1555,523.403,630.221" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="508.5" y="565.8887"> </text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="41" x="512.5" y="565.8887">Store</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="553.5" y="565.8887"> </text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="57" x="557.5" y="565.8887">labeling</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="52" x="535.5" y="579.8574">results</text></g><!--MD5=[756e991de16c32398e85029ed8d3e7fb]
+link videoSamples to labelerA--><g id="link_videoSamples_labelerA"><path d="M198.5,239.043 C198.5,279.548 198.5,333.73 198.5,377.402 " fill="none" id="videoSamples-to-labelerA" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="198.5,385.428,201.5,377.428,195.5,377.428,198.5,385.428" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="199.5" y="280.8887"> </text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="36" x="203.5" y="280.8887">Send</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="239.5" y="280.8887"> </text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="59" x="243.5" y="280.8887">samples</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="302.5" y="280.8887"> </text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="16" x="306.5" y="280.8887">to</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="59" x="231.5" y="294.8574">labelers</text></g><!--MD5=[cd714562d42bd0956c015891f7de0a31]
+link labelerA to modelTrainingInference--><g id="link_labelerA_modelTrainingInference"><path d="M181.334,521.936 C174.706,547.876 167.083,577.711 160.231,604.528 " fill="none" id="labelerA-to-modelTrainingInference" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="158.226,612.374,163.1129,605.3656,157.2996,603.8804,158.226,612.374" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="174.5" y="572.8887"> </text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="36" x="178.5" y="572.8887">Send</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="214.5" y="572.8887"> </text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="43" x="218.5" y="572.8887">labels</text></g><!--MD5=[b8bfa81b111109bcd0af165d9b60a526]
+link modelTrainingInference to sysName--><g id="link_modelTrainingInference_sysName"><path d="M274.24,682.75 C328.392,682.75 389.59,682.75 438.708,682.75 " fill="none" id="modelTrainingInference-to-sysName" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="446.796,682.75,438.796,679.75,438.796,685.75,446.796,682.75" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="36" x="292.5" y="676.8887">Send</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="328.5" y="676.8887"> </text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="43" x="332.5" y="676.8887">model</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="375.5" y="676.8887"> </text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="49" x="379.5" y="676.8887">scores</text></g><!--MD5=[ef375b138b8e95f3d1abcb41730fb2e1]
+reverse link modelTrainingInference to sysName--><g id="link_modelTrainingInference_sysName"><path d="M282.335,699.6446 C321.435,702.3492 363.86,703.478 403,700.75 C417.158,699.7632 432.129,698.172 446.657,696.3336 " fill="none" id="modelTrainingInference-backto-sysName" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="274.044,699.0444,281.8061,702.6151,282.24,696.6308,274.044,699.0444" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="36" x="319" y="697.8887">Send</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="4" x="355" y="697.8887"> </text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="43" x="359" y="697.8887">labels</text></g><!--MD5=[fc8b53ecb98ba29bbaffeb9c54fc2cfe]
 @startuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
@@ -134,6 +134,8 @@ HIDE_STEREOTYPE()
 
 
 
+
+
 skinparam defaultTextAlignment center
 
 skinparam wrapWidth 200
@@ -170,15 +172,15 @@ skinparam arrow {
     FontSize 12
 }
 
+skinparam person {
+    StereotypeFontSize 12
+    shadowing false
+}
+
 skinparam actor {
     StereotypeFontSize 12
     shadowing false
     style awesome
-}
-
-skinparam person {
-    StereotypeFontSize 12
-    shadowing false
 }
 
 skinparam rectangle<<boundary>> {
@@ -277,6 +279,11 @@ skinparam package {
 
 
 
+
+
+
+
+
 skinparam rectangle<<boundary>> {
     FontColor #444444
     BackgroundColor transparent
@@ -292,19 +299,18 @@ skinparam queue<<boundary>> {
     BackgroundColor transparent
     BorderColor #444444
 }
-skinparam actor<<boundary>> {
-    FontColor transparent
-    BackgroundColor transparent
-    BorderColor #444444
-}
 skinparam person<<boundary>> {
     FontColor #444444
     BackgroundColor transparent
     BorderColor #444444
 }
+skinparam actor<<boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
 skinparam package<<boundary>>StereotypeFontColor transparent
 skinparam rectangle<<boundary>>StereotypeFontColor transparent
-
 
 skinparam rectangle<<enterprise_boundary>> {
     FontColor #444444
@@ -321,19 +327,18 @@ skinparam queue<<enterprise_boundary>> {
     BackgroundColor transparent
     BorderColor #444444
 }
-skinparam actor<<enterprise_boundary>> {
-    FontColor transparent
-    BackgroundColor transparent
-    BorderColor #444444
-}
 skinparam person<<enterprise_boundary>> {
     FontColor #444444
     BackgroundColor transparent
     BorderColor #444444
 }
+skinparam actor<<enterprise_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
 skinparam package<<enterprise_boundary>>StereotypeFontColor transparent
 skinparam rectangle<<enterprise_boundary>>StereotypeFontColor transparent
-
 
 
 skinparam rectangle<<system_boundary>> {
@@ -351,19 +356,18 @@ skinparam queue<<system_boundary>> {
     BackgroundColor transparent
     BorderColor #444444
 }
-skinparam actor<<system_boundary>> {
-    FontColor transparent
-    BackgroundColor transparent
-    BorderColor #444444
-}
 skinparam person<<system_boundary>> {
     FontColor #444444
     BackgroundColor transparent
     BorderColor #444444
 }
+skinparam actor<<system_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
 skinparam package<<system_boundary>>StereotypeFontColor transparent
 skinparam rectangle<<system_boundary>>StereotypeFontColor transparent
-
 
 
 skinparam rectangle<<container_boundary>> {
@@ -381,19 +385,18 @@ skinparam queue<<container_boundary>> {
     BackgroundColor transparent
     BorderColor #444444
 }
-skinparam actor<<container_boundary>> {
-    FontColor transparent
-    BackgroundColor transparent
-    BorderColor #444444
-}
 skinparam person<<container_boundary>> {
     FontColor #444444
     BackgroundColor transparent
     BorderColor #444444
 }
+skinparam actor<<container_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
 skinparam package<<container_boundary>>StereotypeFontColor transparent
 skinparam rectangle<<container_boundary>>StereotypeFontColor transparent
-
 
 
 
@@ -443,19 +446,18 @@ skinparam queue<<person>> {
     BackgroundColor #08427B
     BorderColor #073B6F
 }
-skinparam actor<<person>> {
-    StereotypeFontColor #08427B
-    FontColor #08427B
-    BackgroundColor #08427B
-    BorderColor #073B6F
-}
 skinparam person<<person>> {
     StereotypeFontColor #FFFFFF
     FontColor #FFFFFF
     BackgroundColor #08427B
     BorderColor #073B6F
 }
-
+skinparam actor<<person>> {
+    StereotypeFontColor #08427B
+    FontColor #08427B
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
 
 skinparam rectangle<<external_person>> {
     StereotypeFontColor #FFFFFF
@@ -475,19 +477,18 @@ skinparam queue<<external_person>> {
     BackgroundColor #686868
     BorderColor #8A8A8A
 }
-skinparam actor<<external_person>> {
-    StereotypeFontColor #686868
-    FontColor #686868
-    BackgroundColor #686868
-    BorderColor #8A8A8A
-}
 skinparam person<<external_person>> {
     StereotypeFontColor #FFFFFF
     FontColor #FFFFFF
     BackgroundColor #686868
     BorderColor #8A8A8A
 }
-
+skinparam actor<<external_person>> {
+    StereotypeFontColor #686868
+    FontColor #686868
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
 
 skinparam rectangle<<system>> {
     StereotypeFontColor #FFFFFF
@@ -507,19 +508,18 @@ skinparam queue<<system>> {
     BackgroundColor #1168BD
     BorderColor #3C7FC0
 }
-skinparam actor<<system>> {
-    StereotypeFontColor #1168BD
-    FontColor #1168BD
-    BackgroundColor #1168BD
-    BorderColor #3C7FC0
-}
 skinparam person<<system>> {
     StereotypeFontColor #FFFFFF
     FontColor #FFFFFF
     BackgroundColor #1168BD
     BorderColor #3C7FC0
 }
-
+skinparam actor<<system>> {
+    StereotypeFontColor #1168BD
+    FontColor #1168BD
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
 
 skinparam rectangle<<external_system>> {
     StereotypeFontColor #FFFFFF
@@ -539,19 +539,18 @@ skinparam queue<<external_system>> {
     BackgroundColor #999999
     BorderColor #8A8A8A
 }
-skinparam actor<<external_system>> {
-    StereotypeFontColor #999999
-    FontColor #999999
-    BackgroundColor #999999
-    BorderColor #8A8A8A
-}
 skinparam person<<external_system>> {
     StereotypeFontColor #FFFFFF
     FontColor #FFFFFF
     BackgroundColor #999999
     BorderColor #8A8A8A
 }
-
+skinparam actor<<external_system>> {
+    StereotypeFontColor #999999
+    FontColor #999999
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
 
 
 skinparam rectangle<<enterprise_boundary>> {
@@ -569,19 +568,18 @@ skinparam queue<<enterprise_boundary>> {
     BackgroundColor transparent
     BorderColor #444444
 }
-skinparam actor<<enterprise_boundary>> {
-    FontColor transparent
-    BackgroundColor transparent
-    BorderColor #444444
-}
 skinparam person<<enterprise_boundary>> {
     FontColor #444444
     BackgroundColor transparent
     BorderColor #444444
 }
+skinparam actor<<enterprise_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
 skinparam package<<enterprise_boundary>>StereotypeFontColor transparent
 skinparam rectangle<<enterprise_boundary>>StereotypeFontColor transparent
-
 
 
 skinparam rectangle<<system_boundary>> {
@@ -599,19 +597,18 @@ skinparam queue<<system_boundary>> {
     BackgroundColor transparent
     BorderColor #444444
 }
-skinparam actor<<system_boundary>> {
-    FontColor transparent
-    BackgroundColor transparent
-    BorderColor #444444
-}
 skinparam person<<system_boundary>> {
     FontColor #444444
     BackgroundColor transparent
     BorderColor #444444
 }
+skinparam actor<<system_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
 skinparam package<<system_boundary>>StereotypeFontColor transparent
 skinparam rectangle<<system_boundary>>StereotypeFontColor transparent
-
 
 
 
@@ -843,19 +840,50 @@ skinparam queue<<person>> {
     BackgroundColor #08427B
     BorderColor #073B6F
 }
-skinparam actor<<person>> {
-    StereotypeFontColor #08427B
-    FontColor #08427B
-    BackgroundColor #08427B
-    BorderColor #073B6F
-}
 skinparam person<<person>> {
     StereotypeFontColor #FFFFFF
     FontColor #FFFFFF
     BackgroundColor #08427B
     BorderColor #073B6F
 }
+skinparam actor<<person>> {
+    StereotypeFontColor #08427B
+    FontColor #08427B
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
 
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam person<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_person>> {
+    StereotypeFontColor #686868
+    FontColor #686868
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
 
 
 
@@ -1796,19 +1824,18 @@ skinparam queue<<System>> {
     BackgroundColor #ffffff
     Shadowing<<System>> true
 }
-skinparam actor<<System>> {
-    StereotypeFontColor #ffffff
-    FontColor #ffffff
-    BackgroundColor #ffffff
-    Shadowing<<System>> true
-}
 skinparam person<<System>> {
     StereotypeFontColor #000000
     FontColor #000000
     BackgroundColor #ffffff
     Shadowing<<System>> true
 }
-
+skinparam actor<<System>> {
+    StereotypeFontColor #ffffff
+    FontColor #ffffff
+    BackgroundColor #ffffff
+    Shadowing<<System>> true
+}
 
 skinparam rectangle<<Person>> {
     StereotypeFontColor #000000
@@ -1827,17 +1854,16 @@ skinparam queue<<Person>> {
     FontColor #000000
     BackgroundColor #e0f1fb
 }
-skinparam actor<<Person>> {
-    StereotypeFontColor #e0f1fb
-    FontColor #e0f1fb
-    BackgroundColor #e0f1fb
-}
 skinparam person<<Person>> {
     StereotypeFontColor #000000
     FontColor #000000
     BackgroundColor #e0f1fb
 }
-
+skinparam actor<<Person>> {
+    StereotypeFontColor #e0f1fb
+    FontColor #e0f1fb
+    BackgroundColor #e0f1fb
+}
 
 
 skinparam rectangle<<clickableText>> {
@@ -1852,13 +1878,12 @@ skinparam queue<<clickableText>> {
     StereotypeFontColor purple
     FontColor purple
 }
-skinparam actor<<clickableText>> {
-}
 skinparam person<<clickableText>> {
     StereotypeFontColor purple
     FontColor purple
 }
-
+skinparam actor<<clickableText>> {
+}
 
 skinparam rectangle<<button>> {
     StereotypeFontColor #ffffff
@@ -1875,17 +1900,16 @@ skinparam queue<<button>> {
     FontColor #ffffff
     BackgroundColor #444444
 }
-skinparam actor<<button>> {
-    StereotypeFontColor #444444
-    FontColor #444444
-    BackgroundColor #444444
-}
 skinparam person<<button>> {
     StereotypeFontColor #ffffff
     FontColor #ffffff
     BackgroundColor #444444
 }
-
+skinparam actor<<button>> {
+    StereotypeFontColor #444444
+    FontColor #444444
+    BackgroundColor #444444
+}
 
 skinparam rectangle<<primary>> {
     StereotypeFontColor #000000
@@ -1908,13 +1932,6 @@ skinparam queue<<primary>> {
     BorderColor Gray
     Shadowing<<primary>> false
 }
-skinparam actor<<primary>> {
-    StereotypeFontColor #ffdb58
-    FontColor #ffdb58
-    BackgroundColor #ffdb58
-    BorderColor Gray
-    Shadowing<<primary>> false
-}
 skinparam person<<primary>> {
     StereotypeFontColor #000000
     FontColor #000000
@@ -1922,7 +1939,13 @@ skinparam person<<primary>> {
     BorderColor Gray
     Shadowing<<primary>> false
 }
-
+skinparam actor<<primary>> {
+    StereotypeFontColor #ffdb58
+    FontColor #ffdb58
+    BackgroundColor #ffdb58
+    BorderColor Gray
+    Shadowing<<primary>> false
+}
 
 skinparam rectangle<<highlightBoundary>> {
     BackgroundColor #fce8ee
@@ -1933,15 +1956,14 @@ skinparam database<<highlightBoundary>> {
 skinparam queue<<highlightBoundary>> {
     BackgroundColor #fce8ee
 }
+skinparam person<<highlightBoundary>> {
+    BackgroundColor #fce8ee
+}
 skinparam actor<<highlightBoundary>> {
     StereotypeFontColor #fce8ee
     FontColor #fce8ee
     BackgroundColor #fce8ee
 }
-skinparam person<<highlightBoundary>> {
-    BackgroundColor #fce8ee
-}
-
 
 
 
@@ -1967,19 +1989,19 @@ left header
 end header
 
 
-rectangle "<$cloud>\n==Labeling System\n" <<primary>><<system>> as sysName [[https://tinyurl.com/yblre3m4]]
+rectangle "<$cloud>\n== Labeling System\n== " <<primary>><<system>> as sysName [[https://tinyurl.com/yblre3m4]]
 
-rectangle "== \n<font color=black size=16>Labelers</font>\n<size:12>[Human Resources]</size>" <<boundary>> as labelers  {
-    rectangle "<$person>\n==Labelers B\n\n Labeler Type 2\n" <<a>><<person>> as labelerB 
-    rectangle "<$person>\n==Labelers A\n\n Labeler Type 2\n" <<a>><<person>> as labelerA 
+rectangle "==  \n== <font color=black size=16>Labelers</font>\n<size:12>[Human Resources]</size>" <<boundary>> as labelers  {
+    rectangle "<$person>\n== Labelers B\n\n Labeler Type 2\n" <<a>><<person>> as labelerB 
+    rectangle "<$person>\n== Labelers A\n\n Labeler Type 2\n" <<a>><<person>> as labelerA 
 }
 sysName -UP->> labelerB : **  Trigger samples for labeling**
 labelerB -DOWN->> sysName : ** Store labeling results        **
 
-rectangle "<$youtube>\n==Videos\n\n Users and internal customers" <<system>> as videoSamples 
+rectangle "<$youtube>\n== Videos\n\n Users and internal customers" <<system>> as videoSamples 
 videoSamples -DOWN->> labelerA : ** Send samples to labelers**
 
-rectangle "==Model Training + Inference\n\n<font color=#e0575e><$RoboMaker></font>\n" <<secondary>><<system>> as modelTrainingInference 
+rectangle "== Model Training + Inference\n== \n== <font color=#e0575e><$RoboMaker></font>\n== " <<secondary>><<system>> as modelTrainingInference 
 labelerA -DOWN->> modelTrainingInference : ** Send labels**
 modelTrainingInference -RIGHT->> sysName : **Send model scores**
 sysName -LEFT->> modelTrainingInference : **Send labels**
@@ -1987,7 +2009,7 @@ sysName -LEFT->> modelTrainingInference : **Send labels**
 hide stereotype
 @enduml
 
-PlantUML version 1.2022.13beta5(Unknown compile time)
+PlantUML version 1.2022.14beta4(Unknown compile time)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
 JVM: Java HotSpot(TM) 64-Bit Server VM
