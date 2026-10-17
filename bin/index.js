@@ -13,6 +13,7 @@ const run = require(path.resolve(__dirname, '../index.js'))
 // =============
 
 new Command()
+  .name('puml-for-markdown')
   .description('An application to add interactive PUML diagrams to your github markdown files. If running with default arguments, run in project root directory.')
   .option(
     '-s, --puml-server-url <url>',
@@ -45,7 +46,7 @@ new Command()
   )
   .option(
     '-g, --ignore-gitignore',
-    "Don't use .gitignore to skip PUML and MD. Will automatically be true if no gitignore is found",
+    "Don't use .gitignore rules to skip PUML and MD",
   )
   .addOption(new Option(
       '-i, --gitignore-path <path>',
@@ -70,6 +71,12 @@ new Command()
     '-t, --turn-off-link-shortening',
     "Use the full puml server link instead of the tiny url, if your diagrams are too big this won't work",
   )
+  .option('--local-images', 'Link Markdown to exported local images (implies --output-images)')
+  .option('--interactive-links', 'Wrap local image previews in an interactive renderer link')
+  .option('--check', 'Check for stale Markdown and images without writing or using the network')
+  .option('--dry-run', 'List planned changes without writing or using the network')
+  .option('--no-cache', 'Disable the persistent diagram and image cache')
+  .option('-l, --polr-url <url>', 'Use a private Polr shortener; reads POLR_APIKEY from the environment')
   .action(opts => {
       const useDefaultGitignorePath = !opts.gitignorePath
 
@@ -81,14 +88,16 @@ new Command()
       opts.respectGitignore = !opts.ignoreGitignore
       opts.imageFormats = opts.imageFormats === 'both' ? ['png', 'svg'] : [opts.imageFormats]
 
-      // If a gitignore path wasn't specified, don't try and parse it
+      // A missing root ignore file must not disable nested .gitignore files.
       if (useDefaultGitignorePath && !fs.existsSync(opts.gitignorePath)) {
-          opts.respectGitignore = false
+          opts.gitignorePath = undefined
       }
 
-      return run(opts).catch((e) => {
-          console.error('FATAL EXCEPTION')
-          console.error(e)
+      return run(opts).then(result => {
+          if (opts.check && result.stale) process.exitCode = 1
+      }).catch((e) => {
+          console.error(`ERROR: ${e.message}`)
+          process.exitCode = 1
       })
   })
   .parse(process.argv)
