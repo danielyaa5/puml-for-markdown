@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.0
+
+- Add a GitHub Action, `danielyaa5/puml-for-markdown@v2`. `update` mode regenerates
+  diagrams and commits only the files it changed; `check` mode fails pull requests
+  whose diagrams are out of date. Works on Linux, macOS, and Windows runners.
+  See [GitHub Action](./README.md#github-action). No CLI changes.
+
 ## 2.0.1
 
 - Correct outdated README statements about Windows support, automated testing,

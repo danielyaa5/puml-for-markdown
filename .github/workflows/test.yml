@@ -21,3 +21,57 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm pack --dry-run --ignore-scripts
+  action:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create a sample project
+        shell: bash
+        run: |
+          mkdir -p ci-action-project
+          printf '@startuml\nAlice -> Bob: hello\n@enduml\n' > ci-action-project/a.puml
+          printf '<!--![Diagram](a.puml)-->\n' > ci-action-project/README.md
+      - name: Update without committing
+        id: update
+        uses: ./
+        with:
+          root-directory: ci-action-project
+          args: -t
+          commit: "false"
+          cache: "false"
+      - name: Check the updated project
+        id: current
+        uses: ./
+        with:
+          mode: check
+          root-directory: ci-action-project
+          args: -t
+      - name: Edit the diagram
+        shell: bash
+        run: |
+          printf '@startuml\nAlice -> Bob: hi\n@enduml\n' > ci-action-project/a.puml
+      - name: Check the stale project
+        id: stale
+        continue-on-error: true
+        uses: ./
+        with:
+          mode: check
+          root-directory: ci-action-project
+          args: -t
+      - name: Verify outputs
+        shell: bash
+        env:
+          UPDATE_CHANGED: ${{ steps.update.outputs.changed }}
+          UPDATE_FILES: ${{ steps.update.outputs.files }}
+          CURRENT_CHANGED: ${{ steps.current.outputs.changed }}
+          STALE_OUTCOME: ${{ steps.stale.outcome }}
+        run: |
+          test "$UPDATE_CHANGED" = true
+          test "$UPDATE_FILES" = ci-action-project/README.md
+          test "$CURRENT_CHANGED" = false
+          test "$STALE_OUTCOME" = failure
+          grep -q '/svg/' ci-action-project/README.md

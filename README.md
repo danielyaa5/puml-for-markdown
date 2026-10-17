@@ -80,10 +80,63 @@ Requires **Node.js 22 or newer** (Node.js 24 recommended for development).
 
 Version 2 raises the minimum Node.js version to 22. Upgrade Node.js before upgrading
 from version 1. Existing dependencies pinned to `1.x` or `^1.2.1` stay on version 1;
-installing `latest` will select version 2 once it is published. See the
+installing `latest` selects version 2. See the
 [release notes](./CHANGELOG.md) for the changes.
 
 `npm i -g puml-for-markdown`
+
+### GitHub Action
+Keep diagrams current without running the CLI yourself. To regenerate and commit them on every push to `main`:
+
+```yaml
+# .github/workflows/diagrams.yml
+name: Diagrams
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  diagrams:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: danielyaa5/puml-for-markdown@v2
+```
+
+To fail pull requests whose diagrams are out of date instead:
+
+```yaml
+name: Diagrams
+on: pull_request
+jobs:
+  diagrams:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: danielyaa5/puml-for-markdown@v2
+        with:
+          mode: check
+```
+
+| Input | Default | Description |
+|---|---|---|
+| `mode` | `update` | `update` regenerates links and images, then commits and pushes them. `check` regenerates and fails if anything differs from what is committed. |
+| `args` | | Extra CLI options, such as `--local-images -f svg` or `-s https://uml.example.com/plantuml`. Use the options you run locally, or `check` will report differences. |
+| `root-directory` | `.` | Project directory to scan. |
+| `commit` | `true` | In `update` mode, commit and push the changed files. Needs `permissions: contents: write`. |
+| `commit-message` | `Update PlantUML diagrams` | Commit message for `update` mode. |
+| `cache` | `true` | Restore `.puml-cache.json` from earlier runs, and save it in `update` mode, so unchanged diagrams are not rendered or shortened again. |
+
+Outputs: `changed` (`true` or `false`), `files` (changed paths, one per line), and `commit` (the pushed SHA).
+
+- The action commits only the files the CLI changed, never other changes made earlier in the job, and never `.puml-cache.json`.
+- Commits pushed with the default `GITHUB_TOKEN` do not start new workflow runs, so updates cannot loop.
+- `update` needs a branch checkout. On `pull_request` events use `check`, which also works for forks, or check out `${{ github.head_ref }}` for pull requests from the same repository.
+- `check` contacts the same renderer and shortener as a normal run. TinyURL returns the same link for the same diagram, so a pull request regenerated locally passes. With `-t` and no image export, `check` needs no network.
+- For Polr, pass the key from a secret: `env: POLR_APIKEY: ${{ secrets.POLR_APIKEY }}`.
+- The action uses the runner's Node.js when it is version 22 or newer, and otherwise installs Node.js 22. Linux, macOS, and Windows runners are supported.
+- `@v2` follows the latest 2.x release. Pin a release such as `@2.1.0`, or a commit SHA, to control updates.
 
 ### Advanced Usage
 Here are some other features supported

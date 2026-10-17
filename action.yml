@@ -1,0 +1,79 @@
+name: puml-for-markdown
+description: Keep PlantUML diagrams in your Markdown up to date, with clickable links between diagrams. Commit updates or fail stale pull requests.
+author: danielyaa5
+branding:
+  icon: layers
+  color: blue
+
+inputs:
+  mode:
+    description: "update: regenerate diagram links and images, then commit and push the changes. check: regenerate and fail if the committed files are out of date."
+    required: false
+    default: update
+  args:
+    description: Extra puml-for-markdown options, for example "--local-images -f svg" or "-s https://uml.example.com/plantuml". Use the same options you run locally.
+    required: false
+    default: ""
+  root-directory:
+    description: Project directory to scan, relative to the workspace.
+    required: false
+    default: .
+  commit:
+    description: In update mode, commit and push changed files to the checked-out branch. Needs permissions contents write.
+    required: false
+    default: "true"
+  commit-message:
+    description: Commit message used in update mode.
+    required: false
+    default: Update PlantUML diagrams
+  cache:
+    description: Restore .puml-cache.json from earlier runs (and save it in update mode) so unchanged diagrams are not rendered or shortened again.
+    required: false
+    default: "true"
+
+outputs:
+  changed:
+    description: "\"true\" if any Markdown or image files changed, otherwise \"false\"."
+    value: ${{ steps.run.outputs.changed }}
+  files:
+    description: Changed files, one per line, relative to the repository root.
+    value: ${{ steps.run.outputs.files }}
+  commit:
+    description: SHA of the commit pushed in update mode, or empty.
+    value: ${{ steps.run.outputs.commit }}
+
+runs:
+  using: composite
+  steps:
+    - id: node
+      shell: bash
+      run: |
+        major=$(node -p 'process.versions.node.split(".")[0]' 2>/dev/null || echo 0)
+        if [ "$major" -ge 22 ]; then echo "setup=false" >> "$GITHUB_OUTPUT"; else echo "setup=true" >> "$GITHUB_OUTPUT"; fi
+    # Only touch the job's Node.js when the runner's is older than the CLI requires.
+    - if: steps.node.outputs.setup == 'true'
+      uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      with:
+        node-version: 22
+    - shell: bash
+      run: cd "$GITHUB_ACTION_PATH" && npm ci --omit=dev --ignore-scripts --no-audit --no-fund --loglevel=error
+    - if: inputs.cache == 'true'
+      uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      with:
+        path: ${{ inputs.root-directory }}/.puml-cache.json
+        key: puml-for-markdown-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+        restore-keys: puml-for-markdown-${{ runner.os }}-
+    - id: run
+      shell: bash
+      env:
+        PUML_MODE: ${{ inputs.mode }}
+        PUML_ARGS: ${{ inputs.args }}
+        PUML_ROOT_DIRECTORY: ${{ inputs.root-directory }}
+        PUML_COMMIT: ${{ inputs.commit }}
+        PUML_COMMIT_MESSAGE: ${{ inputs.commit-message }}
+      run: node "$GITHUB_ACTION_PATH/action/run.js"
+    - if: inputs.cache == 'true' && inputs.mode == 'update'
+      uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      with:
+        path: ${{ inputs.root-directory }}/.puml-cache.json
+        key: puml-for-markdown-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
