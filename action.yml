@@ -1,5 +1,5 @@
 name: puml-for-markdown
-description: Keep PlantUML diagrams in your Markdown up to date, with clickable links between diagrams. Commit updates or fail stale pull requests.
+description: Keep PlantUML diagrams in Markdown up to date, with clickable links between diagrams.
 author: danielyaa5
 branding:
   icon: layers

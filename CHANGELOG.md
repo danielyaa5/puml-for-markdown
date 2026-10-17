@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.1
+
+- Shorten the GitHub Action's description to fit the Marketplace's 125-character
+  limit, so the Action can be listed there. No CLI changes.
+
 ## 2.1.0
 
 - Add a GitHub Action, `danielyaa5/puml-for-markdown@v2`. `update` mode regenerates
