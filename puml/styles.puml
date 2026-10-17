@@ -10,8 +10,6 @@
             BackgroundColor #E4D4EF
         }
     }
-    * {
-    }
 
     .true {
         FontColor White

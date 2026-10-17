@@ -12,13 +12,13 @@ left header
 end header
 
 start
-#E4D4EF: <font size=14>Inputs</font>
+: <font size=14>Inputs</font>
 ----
 
 *<U+00A0>""$TYPE_Y_SAMPLE_POOL_TABLE"": These are samples of type y
 
 *<U+00A0>""sample_size"": How many samples to collect
-]
+; <<#E4D4EF>> <<task>>
 -> \n;
 
 partition "**operator** OperatorFooBar " {

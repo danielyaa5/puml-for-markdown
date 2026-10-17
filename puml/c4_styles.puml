@@ -19,7 +19,7 @@
 !include <office/Concepts/service_application>
 !include <office/Concepts/firewall>
 
-!define AWS_PUML https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist
+!define AWS_PUML https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v14.0/dist
 !include AWS_PUML/AWSCommon.puml
 !include AWS_PUML/Robotics/RoboMaker.puml
 
