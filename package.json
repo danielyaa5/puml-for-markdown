@@ -50,6 +50,7 @@
     "index.js",
     "bin/",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE.md",
     "lib/"
   ]
