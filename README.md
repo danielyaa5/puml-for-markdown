@@ -88,8 +88,8 @@ installing `latest` will select version 2 once it is published. See the
 ### Advanced Usage
 Here are some other features supported
 - You can specify the CLI to output the diagram images as png and/or svg see `--output-images` and `--image-formats`.
-For an example of outputted images, checkout [dist_puml/puml](./dist_puml/puml). These images were created by the
-[pre-commit hook](./.husky/pre-commit).
+For historical examples of exported images, see [dist_puml/puml](./dist_puml/puml).
+The current pre-commit hook runs the automated tests.
 - You can specify the PUML server used to render the diagrams see `--puml-server-url`
 
 ### All CLI Options
@@ -173,18 +173,26 @@ In order to support `!include` we parse puml files and replace any `!include` wi
 #### Parsing Markdown
 The markdown files are then parsed for markdown comments. If the comments reference a PlantUML file, a link to the web
 service url will be added next to the comment. Because these links contain the full PlantUML diagram encoding in it,
-there are no issues using them in private repositories.
+the source can be recovered from the URL. A private repository does not make the
+renderer or shortener private; see [diagram privacy](#reliability-and-operational-notes).
 
 ### Testing
-Currently there is no TDD, for now I've just been using the example diagrams to test. The examples are pretty extensive
-though.
+Run `npm test` to execute the automated CLI regression tests. CI runs on Linux,
+macOS, and Windows with Node.js 22 and 24. The suite covers Markdown updates,
+path handling, ignore rules, includes, image exports, caching, and shortening.
+See [CONTRIBUTING.md](https://github.com/danielyaa5/puml-for-markdown/blob/main/CONTRIBUTING.md)
+for development instructions.
 
 ### Other Helpful Links
 * [C4-Puml](https://github.com/plantuml-stdlib/C4-PlantUML): A collection of PlantUML diagrams for use in C4, you'll see me using this in my examples
 
-### Known Issues
-* Seems to be breaking on Windows, see [here](https://github.com/danielyaa5/puml-for-markdown/issues/6). I don't have a
-Windows machine to test on so help here would be appreciated.
+### Windows support
+Version 2 fixes the reported Windows path lookup issue
+([#6](https://github.com/danielyaa5/puml-for-markdown/issues/6)). Windows path and
+ignore-rule regressions are covered by automated tests. The version 2 changes
+were also tested on Windows 11 ARM64 with Node.js 24.
+
+For remaining limitations, see [reliability and operational notes](#reliability-and-operational-notes).
 
 ### More Examples
 [![ERD](https://tinyurl.com/2amb263t)](https://tinyurl.com/2amb263t)<!--![ERD](./puml/level_4_erd.puml)-->

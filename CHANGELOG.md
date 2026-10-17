@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.1
+
+- Correct outdated README statements about Windows support, automated testing,
+  the pre-commit hook, and diagram privacy. No runtime behavior changes.
+
 ## 2.0.0
 
 ### Migration from version 1
