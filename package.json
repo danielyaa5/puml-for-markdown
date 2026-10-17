@@ -4,19 +4,16 @@
   "description": "An application to add interactive PUML diagrams to your github markdown files. If running with default arguments, run in project root directory.",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "node --test"
   },
   "author": "danielyaa5",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "bent": "7.3.12",
-    "bluebird": "3.7.2",
     "commander": "8.2.0",
-    "gitignore-globs": "0.1.1",
-    "glob": "7.2.0",
-    "lodash": "4.17.21",
-    "plantuml-encoder": "1.4.0",
-    "tinyurl": "1.1.7"
+    "ignore": "7.0.12",
+    "markdown-it": "15.0.3",
+    "plantuml-encoder": "1.4.0"
   },
   "bin": {
     "puml-for-markdown": "./bin/index.js"
@@ -45,5 +42,15 @@
   },
   "devDependencies": {
     "husky": "7.0.4"
-  }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "index.js",
+    "bin/",
+    "README.md",
+    "LICENSE.md",
+    "lib/"
+  ]
 }

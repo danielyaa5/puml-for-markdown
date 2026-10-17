@@ -204,3 +204,6 @@ out/
 atlassian-ide-plugin.xml
 
 .idea
+
+# Local diagram cache contains recoverable diagram source
+.puml-cache.json
