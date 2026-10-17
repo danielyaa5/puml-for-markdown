@@ -185,6 +185,12 @@ test('a project outside a git repository is rejected', async t => {
   assert.match(result.stdout, /not inside a git repository/)
 })
 
+test('action.yml description fits the GitHub Marketplace limit', () => {
+  const metadata = fs.readFileSync(path.resolve(__dirname, '../action.yml'), 'utf8')
+  const description = /^description: (.+)$/m.exec(metadata)[1]
+  assert.ok(description.length < 125, `${description.length} characters`)
+})
+
 test('args split like a shell without evaluating, and owned options are refused', () => {
   assert.deepEqual(splitArgs(` --dist-directory "docs/my images" -f 'svg'  C:\\out "say \\"hi\\"" '' `),
     ['--dist-directory', 'docs/my images', '-f', 'svg', 'C:\\out', 'say "hi"', ''])
