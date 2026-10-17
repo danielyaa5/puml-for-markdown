@@ -504,3 +504,16 @@ test('issue #6: nested native paths and whitespace in comments find the diagram'
   assert.equal(result.status, 0, result.stderr)
   assert.match(fs.readFileSync(path.join(root, 'docs/01-context.md'), 'utf8'), /\/svg\//)
 })
+
+test('exported images use normal permissions and preserve existing modes; cache stays private', { skip: process.platform === 'win32' }, async t => {
+  const url = await server(t, (req, res) => res.end('<svg></svg>'))
+  const root = fixture(t, { 'a.puml': diagram, 'README.md': marker })
+  const args = ['--local-images', '-f', 'svg', '-s', url]
+  assert.equal((await runAsync(root, args)).status, 0)
+  const image = path.join(root, 'dist_puml/a.svg')
+  assert.equal(fs.statSync(image).mode & 0o777, 0o666 & ~process.umask())
+  assert.equal(fs.statSync(path.join(root, '.puml-cache.json')).mode & 0o777, 0o600 & ~process.umask())
+  fs.chmodSync(image, 0o640)
+  assert.equal((await runAsync(root, [...args, '--no-cache'])).status, 0)
+  assert.equal(fs.statSync(image).mode & 0o777, 0o640 & ~process.umask())
+})

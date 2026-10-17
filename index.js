@@ -289,7 +289,8 @@ async function saveDiagrams(diagrams, options, cache) {
     // Never remove the output directory: it may contain unrelated user files.
     fs.mkdirSync(path.dirname(destination), { recursive: true })
     checkDestination(destination, options)
-    writeAtomic(destination, buffer)
+    const mode = fs.existsSync(destination) ? fs.statSync(destination).mode & 0o777 : 0o666
+    writeAtomic(destination, buffer, mode)
     cache.set('images', key, { digest: hash(buffer) })
   }
   return changed
