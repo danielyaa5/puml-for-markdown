@@ -78,6 +78,11 @@ don't need to delete the rendered image or link.
 ### Installation
 Requires **Node.js 22 or newer** (Node.js 24 recommended for development).
 
+Version 2 raises the minimum Node.js version to 22. Upgrade Node.js before upgrading
+from version 1. Existing dependencies pinned to `1.x` or `^1.2.1` stay on version 1;
+installing `latest` will select version 2 once it is published. See the
+[release notes](./CHANGELOG.md) for the changes.
+
 `npm i -g puml-for-markdown`
 
 ### Advanced Usage
