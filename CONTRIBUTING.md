@@ -28,3 +28,17 @@ configured renderer and the encoded URL to TinyURL. Add `-t` to disable
 shortening, and `-s http://localhost:8080/plantuml` to use a local renderer.
 
 Do not run live generation against the repository README as part of tests.
+
+## Releasing
+
+1. Update the version in `package.json` and `package-lock.json`, add a
+   `CHANGELOG.md` entry, and merge to `main`.
+2. Run `npm publish` from a clean checkout of `main`.
+3. Create a GitHub release named and tagged with the version, such as `2.1.0`,
+   and tick **Publish this Action to the GitHub Marketplace**. The first time,
+   GitHub asks the repository owner to accept the Marketplace Developer Agreement.
+4. Move the major tag that workflows use: `git tag -f v2 2.1.0 && git push -f origin v2`.
+
+The action's CI job runs `action.yml` on Linux, macOS, and Windows runners.
+`test/action.test.js` covers committing, pushing, and check failures against
+temporary repositories.
