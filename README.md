@@ -20,7 +20,7 @@ You can easily add an embedded diagram to your markdown. Simply add a link to th
 
 Here's the result. **Try clicking on the yellow blocks.**
 
-[![Diagram Image Link](https://da.gd/ihWCK)](https://da.gd/ihWCK)<!--![Diagram Image Link](./puml/level_1_system_view.puml)-->
+[![Diagram Image Link](https://da.gd/68q5ZE)](https://da.gd/68q5ZE)<!--![Diagram Image Link](./puml/level_1_system_view.puml)-->
 
 ### Link Only
 To render a link to a puml diagram, do the same thing but exclude the `!`
@@ -30,7 +30,7 @@ To render a link to a puml diagram, do the same thing but exclude the `!`
 
 which renders into
 
-[Click to Open Interactive Diagram](https://da.gd/ihWCK)<!--[Click to Open Interactive Diagram](./puml/level_1_system_view.puml)-->
+[Click to Open Interactive Diagram](https://da.gd/68q5ZE)<!--[Click to Open Interactive Diagram](./puml/level_1_system_view.puml)-->
 
 ## Goal
 The goal is to make PlantUML diagrams easily accessible from markdown, specifically GitHub flavored.
@@ -59,7 +59,7 @@ puml diagram. E.g.
 ```
 will be replaced with
 ```
-[Example With Only Link](https://da.gd/ihWCK)<!--[Example With Only Link](./puml/level_1_system_view.puml)-->
+[Example With Only Link](https://da.gd/68q5ZE)<!--[Example With Only Link](./puml/level_1_system_view.puml)-->
 ```
 
 When `!` is included in front of the markdown link, it will render the diagram image in the markdown. If the image is
@@ -69,7 +69,7 @@ clicked it will open up the diagram. E.g.
 ```
 will be replaced with
 ```
-[![Example With Graph Image](https://da.gd/ihWCK)](https://da.gd/ihWCK)<!--![Example With Graph Image](./puml/level_1_system_view.puml)-->
+[![Example With Graph Image](https://da.gd/68q5ZE)](https://da.gd/68q5ZE)<!--![Example With Graph Image](./puml/level_1_system_view.puml)-->
 ```
 
 If you want to update the link text or switch it between image and link, just update the comment and rerun the CLI. You
@@ -254,15 +254,15 @@ For remaining limitations, see [reliability and operational notes](#reliability-
 
 
 
-[![Container View](https://da.gd/M8TpY0)](https://da.gd/M8TpY0)<!--![Container View](./puml/level_2_container_view.puml)-->
+[![Container View](https://da.gd/ht4nas)](https://da.gd/ht4nas)<!--![Container View](./puml/level_2_container_view.puml)-->
 
 
 
-[![Component View - Label Retrieval Job](https://da.gd/b3QEPm)](https://da.gd/b3QEPm)<!--![Component View - Label Retrieval Job](./puml/level_3_component_view_label_retrieval_job.puml)-->
+[![Component View - Label Retrieval Job](https://da.gd/FYHn6)](https://da.gd/FYHn6)<!--![Component View - Label Retrieval Job](./puml/level_3_component_view_label_retrieval_job.puml)-->
 
 
 
-[![Component View - Pipeline Component](https://da.gd/uOPu1k)](https://da.gd/uOPu1k)<!--![Component View - Pipeline Component](./puml/level_3_component_view_pipeline.puml)-->
+[![Component View - Pipeline Component](https://da.gd/LSAu7)](https://da.gd/LSAu7)<!--![Component View - Pipeline Component](./puml/level_3_component_view_pipeline.puml)-->
 
 
 
