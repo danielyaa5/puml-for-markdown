@@ -69,7 +69,7 @@ new Command()
   )
   .option(
     '-t, --turn-off-link-shortening',
-    "Use the full puml server link instead of the tiny url, if your diagrams are too big this won't work",
+    "Use the full puml server link instead of shortening it, if your diagrams are too big this won't work",
   )
   .option('--local-images', 'Link Markdown to exported local images (implies --output-images)')
   .option('--interactive-links', 'Wrap local image previews in an interactive renderer link')
@@ -77,6 +77,7 @@ new Command()
   .option('--dry-run', 'List planned changes without writing or using the network')
   .option('--no-cache', 'Disable the persistent diagram and image cache')
   .option('-l, --polr-url <url>', 'Use a private Polr shortener; reads POLR_APIKEY from the environment')
+  .option('--shortener-url <url>', 'Custom GET shortener URL prefix or {url} template (default: da.gd)')
   .action(opts => {
       const useDefaultGitignorePath = !opts.gitignorePath
 

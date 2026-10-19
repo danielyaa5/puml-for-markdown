@@ -39,16 +39,28 @@ function normalizeOptions(input) {
     imageFormats: input.imageFormats || ['png'],
     intervalSeconds: Number(input.intervalSeconds ?? 2),
     polrUrl: input.polrUrl?.replace(/\/+$/, ''),
+    shortenerUrl: input.shortenerUrl,
     outputImages: Boolean(input.outputImages || input.localImages),
   }
   if (options.respectGitignore && input.gitignorePath && !fs.existsSync(options.gitignorePath)) {
     throw new Error(`Gitignore file does not exist: ${options.gitignorePath}`)
   }
   if (options.interactiveLinks && !options.localImages) throw new Error('--interactive-links requires --local-images')
-  if (options.polrUrl && !options.shouldShortenLinks) throw new Error('--polr-url cannot be combined with disabled shortening')
+  if ((options.polrUrl || options.shortenerUrl) && !options.shouldShortenLinks) {
+    throw new Error('--polr-url and --shortener-url cannot be combined with disabled shortening')
+  }
+  if (options.polrUrl && options.shortenerUrl) throw new Error('--polr-url and --shortener-url cannot be combined')
   if (options.polrUrl) {
     const polr = new URL(options.polrUrl)
     if (!validUrl(options.polrUrl) || polr.search || polr.hash) throw new Error('Polr URL must be an HTTP(S) base URL without credentials, query or fragment')
+  }
+  if (options.shortenerUrl) {
+    const probe = options.shortenerUrl.replaceAll('{url}', 'https%3A%2F%2Fexample.com')
+    let shortener
+    try { shortener = new URL(probe) } catch {}
+    if (!shortener || !validUrl(probe) || shortener.hash) {
+      throw new Error('Shortener URL must be an HTTP(S) URL without credentials or fragment')
+    }
   }
   if (options.hotReload && (options.check || options.dryRun)) throw new Error('--check and --dry-run cannot be combined with --hot-reload')
   const server = new URL(options.pumlServerUrl)
@@ -116,7 +128,7 @@ function discover(directory, extension, options) {
 }
 
 async function buildDiagrams(files, options, cache) {
-  const context = JSON.stringify([options.pumlServerUrl, options.polrUrl || null, hash(process.env.POLR_APIKEY || ""), options.shouldShortenLinks, !!options.localImages, !!options.interactiveLinks, localFormat(options)])
+  const context = JSON.stringify([options.pumlServerUrl, options.polrUrl || null, options.shortenerUrl || 'https://da.gd/s?url=', hash(process.env.POLR_APIKEY || ""), options.shouldShortenLinks, !!options.localImages, !!options.interactiveLinks, localFormat(options)])
   let rebuilt = 0, reused = 0, unresolved = 0
   const known = new Set(files)
   const completed = new Map()

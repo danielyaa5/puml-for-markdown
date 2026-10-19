@@ -437,11 +437,51 @@ test('interactive preview uses local SVG links and a separate working remote sou
   const source = encoder.decode(remote.split('/').pop())
   assert.ok(source.includes(`$link="${url}/svg/${encoder.encode(diagram)}"`))
 })
+test('custom shortener-url supports prefix and {url} template, caches by endpoint, and hides failure bodies', async t => {
+  const requests = []
+  const url = await server(t, (req, res) => {
+    requests.push(req.url)
+    if (req.url.startsWith('/fail')) { res.writeHead(500); res.end('secret internal error'); return }
+    res.end(`https://short.example/r/${requests.length}\n`)
+  })
+  const root = fixture(t, { 'a.puml': diagram, 'README.md': marker })
+  const expectedTarget = encodeURIComponent(`https://www.plantuml.com/plantuml/svg/${encoder.encode(diagram)}`)
+  assert.equal((await providerRun(root, ['--shortener-url', `${url}/s?url=`])).status, 0)
+  assert.equal(requests.length, 1)
+  assert.equal(requests[0], `/s?url=${expectedTarget}`)
+  assert.ok(read(root).includes('https://short.example/r/1'))
+  assert.equal((await providerRun(root, ['--shortener-url', `${url}/s?url=`, '--check'])).status, 0)
+  assert.equal(requests.length, 1)
+
+  // Changing shortener-url invalidates the cache entry and uses {url} placeholder when present.
+  assert.equal((await providerRun(root, ['--shortener-url', `${url}/t?target={url}&format=text`])).status, 0)
+  assert.equal(requests.length, 2)
+  assert.equal(requests[1], `/t?target=${expectedTarget}&format=text`)
+  assert.ok(read(root).includes('https://short.example/r/2'))
+
+  // A failed custom shortener falls back to the direct URL without leaking response body.
+  const failed = await providerRun(root, ['--shortener-url', `${url}/fail?url=`])
+  assert.equal(failed.status, 0)
+  assert.match(failed.stderr, /Shortener request failed/)
+  assert.doesNotMatch(failed.stderr, /secret/)
+  assert.ok(read(root).includes('/svg/'))
+})
 test('invalid mode combinations fail before writing', t => {
   const root = fixture(t, { 'a.puml': diagram, 'README.md': marker })
-  for (const args of [['--interactive-links'], ['--check', '-r'], ['--dry-run', '-r'], ['--polr-url', 'https://example.com']]) {
+  for (const args of [
+    ['--interactive-links'],
+    ['--check', '-r'],
+    ['--dry-run', '-r'],
+    ['--polr-url', 'https://example.com'],
+    ['--shortener-url', 'https://example.com/s?url='],
+    ['--polr-url', 'https://example.com', '--shortener-url', 'https://example.com/s?url=', '-t'],
+    ['--shortener-url', 'ftp://example.com/s?url='],
+    ['--shortener-url', 'https://user:pass@example.com/s?url='],
+    ['--shortener-url', 'https://example.com/s?url=#frag'],
+  ]) {
     assert.equal(run(root, args).status, 1)
   }
+  assert.equal(assert.equal(spawnSync(process.execPath, [cli, '-x', root, '--polr-url', 'https://example.com', '--shortener-url', 'https://example.com/s?url='], { encoding: 'utf8' }).status, 1), undefined)
   assert.equal(read(root), marker)
 })
 
