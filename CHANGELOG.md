@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.0
+
+- Switch default link shortener from TinyURL to `da.gd` to avoid interstitial preview
+  and ad pages on unauthenticated links.
+- Add `--shortener-url <url>` option to allow custom GET shortener endpoints and
+  `{url}` templates.
+- Update documentation and examples to use `da.gd`.
+
 ## 2.1.1
 
 - Shorten the GitHub Action's description to fit the Marketplace's 125-character
