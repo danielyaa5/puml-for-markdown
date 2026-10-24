@@ -1,13 +1,16 @@
 {
   "name": "puml-for-markdown",
   "version": "2.2.0",
-  "description": "An application to add interactive PUML diagrams to your github markdown files. If running with default arguments, run in project root directory.",
+  "description": "Render PlantUML diagrams in GitHub Markdown: clickable diagram images and links from .puml files, with links between diagrams. CLI and GitHub Action.",
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
     "test": "node --test"
   },
-  "author": "danielyaa5",
+  "author": {
+    "name": "Daniel Yakobian",
+    "url": "https://danielyakobian.com/"
+  },
   "license": "MIT",
   "dependencies": {
     "commander": "8.2.0",
@@ -31,7 +34,9 @@
     "markdown",
     "generator",
     "cli",
-    "diagrams",
+    "github-action",
+    "readme",
+    "docs-as-code",
     "documentation",
     "architecture",
     "architecture-diagrams"

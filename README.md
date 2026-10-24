@@ -1,5 +1,10 @@
 # puml-for-markdown
 
+Render PlantUML diagrams in GitHub Markdown. Link a `.puml` or `.plantuml` file from a Markdown comment, and
+puml-for-markdown adds the rendered diagram, or a link to it, beside the comment. Diagrams show up in READMEs and docs
+with no image files to store in the repository, work in private repositories without tokens, and can link to each
+other. Run it as a CLI, or as a GitHub Action that keeps diagrams up to date.
+
 ## Simple CLI Usage
 Just run `puml-for-markdown` in any directory where you have markdown files and it will render links to PlantUML files
 in markdown comments. The best part about this is that it requires no build files, you don't even need to store 
