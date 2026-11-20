@@ -5,6 +5,8 @@ puml-for-markdown adds the rendered diagram, or a link to it, beside the comment
 with no image files to store in the repository, work in private repositories without tokens, and can link to each
 other. Run it as a CLI, or as a GitHub Action that keeps diagrams up to date.
 
+Demo and overview: [danielyakobian.com/puml-for-markdown](https://danielyakobian.com/puml-for-markdown/) · [npm](https://www.npmjs.com/package/puml-for-markdown) · [GitHub Marketplace](https://github.com/marketplace/actions/puml-for-markdown)
+
 ![Clicking through linked PlantUML diagrams in a browser](./docs/demo.gif)
 
 ## Simple CLI Usage
